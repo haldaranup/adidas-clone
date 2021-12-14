@@ -1,0 +1,76 @@
+section {
+    padding: 0px 12px;
+    margin: 100px 0px;
+}
+
+#displayContents>div {
+    /* border: 1px solid black; */
+    width: 19%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#displayContents {
+    display: flex;
+    grid-gap: 10px;
+    width: 100%;
+    overflow-x: scroll;
+    width: 1350px;
+    padding-right: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+h4 {
+    margin: 5px 0px;
+    font-size: 16px;
+}
+
+p {
+    margin: 10px 0px;
+    font-size: 16px;
+    color: rgb(44, 44, 44);
+}
+
+a {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+h6 {
+    margin: 2px;
+    font-weight: 100;
+}
+
+#categoryShop>div {
+    /* border: 1px solid red; */
+    width: 300px;
+}
+
+#categoryShop>div>div {
+    border: 1px solid black;
+    margin-top: 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    width: 150px;
+    padding: 15px;
+}
+
+#categoryShop {
+    display: flex;
+    grid-gap: 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#womenDescription {
+    margin: auto;
+    width: 650px;
+    text-align: center;
+}
+
+#womenDescription>p {
+    font-size: 19px;
+}
