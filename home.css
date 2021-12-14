@@ -1,0 +1,208 @@
+* {
+    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+}
+
+.hamburger {
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+}
+
+.uppernav {
+    width: 100%;
+    height: 30px;
+    font-size: 11px;
+    background-color: #000000;
+    display: flex;
+}
+
+.uppernav>p>a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.firstnav {
+    padding-left: 65%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 32px;
+    margin: 0 auto;
+    width: 100%;
+    margin-right: 2%;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.firstnav>p>a {
+    text-decoration: none;
+    color: #524f4f;
+    
+}
+
+.midnav {
+    height: 4em;
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.adidaslogo {
+    height: 50px;
+    top: -10px;
+    width: 75px;
+    position: relative;
+}
+
+.logodiv {
+    display: flex;
+    margin-left: 2%;
+}
+
+.cat {
+    display: flex;
+    width: 50%;
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+.cat>p>a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.search {
+    height: 34px;
+    width: 200px;
+    background-color: #e9ecef;
+    border: none;
+    margin-right: 10px;
+}
+
+.footsignup {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.center {
+    height: 1400px;
+}
+
+.indialogo {
+    height: 12px;
+    width: 18px;
+    margin-left: 25%;
+}
+
+.copyright {
+    margin-left: 25%;
+}
+
+.icons {
+    display: flex;
+    margin-right: 10px;
+}
+
+.disicon {
+    margin: 15px;
+    margin-right: 10px;
+}
+
+.searchicon {
+    display: none;
+}
+.lastfoot{
+    background-color: #363738;
+    height: 120px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .cat {
+        width: 50%;
+        font-size: 11px;
+    }
+
+    .search {
+        height: 30px;
+        width: 160px;
+    }
+
+    .firstnav {
+        padding-left: 60%;
+    }
+
+    .uppernav :nth-child(2) {
+        display: none;
+    }
+
+    .uppernav :nth-child(3) {
+        display: none;
+    }
+
+    .logodiv {
+        margin-left: 1%;
+    }
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+    .displaynone {
+        display: none;
+    }
+
+    .logodiv {
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+
+    .uppernav :nth-child(2) {
+        display: none;
+    }
+
+    .uppernav :nth-child(3) {
+        display: none;
+    }
+
+    .heart {
+        display: none;
+    }
+
+    .icons {
+        margin-top: 25px;
+        margin-right: 5%;
+    }
+
+    .searchicon {
+        display: initial;
+        margin-left: 5px;
+    }
+
+    .hamburger {
+        display: initial;
+        margin-left: 2%;
+    }
+
+}
