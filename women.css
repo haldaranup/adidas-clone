@@ -11,9 +11,20 @@ section>div>div:hover {
 #womenOriginals>div,
 #bestOfAdidas>div {
     /* border: 1px solid black; */
-    width: 19%;
+    min-width: 21%;
     font-family: 'Noto Sans', sans-serif;
     position: relative;
+}
+
+#displayContents,
+#womenOriginals,
+#bestOfAdidas {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-right: 20px;
 }
 
 .wishlistSymbol {
@@ -34,19 +45,8 @@ section>div>div:hover {
     background-color: white;
     padding: 0px 5px;
     position: absolute;
-    bottom: 40px;
+    top: 225px;
     left: 16px;
-}
-
-#displayContents,
-#womenOriginals,
-#bestOfAdidas {
-    display: flex;
-    grid-gap: 10px;
-    width: 100%;
-    overflow-x: scroll;
-    width: 1350px;
-    padding-right: 20px;
 }
 
 img {
@@ -110,11 +110,10 @@ h6 {
 /* -------------------------------------------- */
 
 #container_banner {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin: 50px auto;
-    height: 250px;
+    height: 400px;
 }
 
 .container_banneer_img1 {
@@ -144,8 +143,6 @@ h6 {
     color: white;
 }
 
-
-/*
 @media only screen and (min-width:600px)and (max-width:960px) {
     #container_banner {
         display: grid;
@@ -166,11 +163,43 @@ h6 {
         width: 50%;
         height: auto;
     }
+    #displayContents>div {
+        min-width: 40%;
+    }
+    #womenOriginals>div,
+    #bestOfAdidas>div {
+        min-width: 31%;
+    }
+    #categoryShop>div {
+        /* border: 1px solid red; */
+        min-width: 310px;
+    }
+    #categoryShop {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+    }
+    #productSection>section>h1 {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 50px 0px;
+    }
+    .price {
+        top: 190px;
+    }
+    .price1 {
+        bottom: 50px;
+    }
+    #womenDescription {
+        width: 90%;
+    }
 }
 
 @media only screen and (min-width:0px)and (max-width:599px) {
     #container_banner {
         grid-template-columns: repeat(1, 1fr);
+        height: 580px;
     }
     .container_banneer_img1 {
         display: flex;
@@ -182,6 +211,117 @@ h6 {
         width: 40%;
         height: auto;
     }
+    #displayContents>div {
+        min-width: 85%;
+    }
+    #womenOriginals>div,
+    #bestOfAdidas>div {
+        min-width: 42%;
+    }
+    #categoryShop {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+    }
+    #categoryShop>div {
+        /* border: 1px solid red; */
+        min-width: 280px;
+    }
+    #womenDescription {
+        width: 90%;
+    }
+    #productSection>section>h1 {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 50px 0px;
+    }
+    .price {
+        top: 105px;
+    }
+    .price1 {
+        bottom: 65px;
+    }
 }
 
-*/
+
+/* poster css start */
+
+* {
+    margin: 0px;
+}
+
+#poster {
+    width: 100%;
+    height: 100vh;
+    min-height: 30vh;
+    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enIN/Images/ss22-ivp-5-launch-hp-v3-d_tcm209-819981.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.poster_container {
+    width: auto;
+    margin-left: 20px;
+}
+
+.poster_container>h2 {
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.poster_container>button {
+    padding: 15px 25px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.poster_container>i {
+    font-size: 20px;
+    color: black;
+    margin-left: 10px;
+}
+
+.poster_container>h1 {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* poster css end */
+
+
+/* poster media queries start  */
+
+@media only screen and (min-width:600px)and (max-width:960px) {
+    #poster {
+        align-items: flex-end;
+        height: 60vh;
+        background-size: cover;
+        width: 100%;
+    }
+    .poster_container {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:0px)and (max-width:599px) {
+    #poster {
+        align-items: flex-end;
+        width: 100%;
+        min-width: 100%;
+        background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_600,w_600/enIN/Images/ss22-ivp-5-launch-hp-v3-m_tcm209-819980.jpg");
+    }
+    .poster_container {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* poster media queries end  */
