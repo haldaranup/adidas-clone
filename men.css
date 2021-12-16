@@ -1,0 +1,360 @@
+section {
+    padding: 0px 12px;
+    margin: 80px 0px;
+}
+
+section>div>div:hover {
+    cursor: pointer;
+}
+
+#displayContents>div,
+#menOriginals>div,
+#bestOfAdidas>div {
+    /* border: 1px solid black; */
+    min-width: 21%;
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+}
+
+#displayContents,
+#menOriginals,
+#bestOfAdidas {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-right: 20px;
+}
+#menOriginals,
+#bestOfAdidas{
+    height: 380px;
+}
+#menOriginals>div:hover,
+#bestOfAdidas>div:hover{
+    border: 1px solid black;
+}
+.wishlistSymbol {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+#productSection a:hover{
+    background-color: black;
+    color: white;
+}
+
+.price1 {
+    background-color: white;
+    padding: 0px 5px;
+    position: absolute;
+    top: 225px;
+    left: 16px;
+}
+
+.price {
+    background-color: white;
+    padding: 0px 5px;
+    position: absolute;
+    top: 225px;
+    left: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+h4 {
+    margin: 5px 0px;
+    font-size: 16px;
+}
+
+p {
+    margin: 10px 0px;
+    font-size: 16px;
+    color: rgb(44, 44, 44);
+}
+
+a {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+h6 {
+    margin: 2px;
+    font-weight: 100;
+}
+
+
+
+
+#menDescription {
+    margin: auto;
+    width: 750px;
+    text-align: center;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;;
+}
+
+#menDescription>p {
+    font-size: 19px;
+}
+
+
+/* -------------------------------------------- */
+
+#container_banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 50px auto;
+    height: 250px;
+    
+}
+
+.container_banneer_img1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-COLOR: #ebeff1;
+}
+
+.container_banneer_img1>img {
+    width: 80%;
+    height: 200px;
+}
+
+.container_banneer_img1>h5 {
+    text-decoration: underline;
+    margin-top: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.container_banneer_img1>h5:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (min-width:600px)and (max-width:960px) {
+    #container_banner {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin: 50px auto;
+    }
+    .container_banneer_img1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-COLOR: #ebeff1;
+        align-items: flex-end;
+    }
+    .container_banneer_img1>img {
+        width: 50%;
+        height: auto;
+    }
+    #displayContents>div {
+        min-width: 40%;
+    }
+    #menOriginals>div,
+    #bestOfAdidas>div {
+        min-width: 31%;
+    }
+   
+    #productSection>section>h1 {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 50px 0px;
+    }
+    .price {
+        top: 190px;
+    }
+    .price1 {
+        bottom: 50px;
+    }
+    #menDescription {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:0px)and (max-width:599px) {
+    #container_banner {
+        grid-template-columns: repeat(1, 1fr);
+        height: 580px;
+    }
+    .container_banneer_img1 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .container_banneer_img1>img {
+        width: 40%;
+        height: auto;
+    }
+    #displayContents>div {
+        min-width: 85%;
+    }
+    #menOriginals>div,
+    #bestOfAdidas>div {
+        min-width: 42%;
+    }
+    
+    #menDescription {
+        width: 90%;
+    }
+    #productSection>section>h1 {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 50px 0px;
+    }
+    .price {
+        top: 105px;
+    }
+    .price1 {
+        bottom: 65px;
+    }
+}
+
+
+/* poster css start */
+
+* {
+    margin: 0px;
+}
+
+#poster {
+    width: 100%;
+    height: 100vh;
+    min-height: 30vh;
+    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enIN/Images/ss22-ivp-5-launch-hp-v3-d_tcm209-819981.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.poster_container {
+    width: auto;
+    margin-left: 20px;
+}
+
+.poster_container>h2 {
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.poster_container>button {
+    padding: 15px 25px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.poster_container>i {
+    font-size: 20px;
+    color: black;
+    margin-left: 10px;
+}
+
+.poster_container>h1 {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* poster css end */
+
+
+/* poster media queries start  */
+
+@media only screen and (min-width:600px)and (max-width:960px) {
+    #poster {
+        align-items: flex-end;
+        height: 60vh;
+        background-size: cover;
+        width: 100%;
+    }
+    .poster_container {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:0px)and (max-width:599px) {
+    #poster {
+        align-items: flex-end;
+        width: 100%;
+        min-width: 100%;
+        background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_600,w_600/enIN/Images/ss22-ivp-5-launch-hp-v3-m_tcm209-819980.jpg");
+    }
+    .poster_container {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* poster media queries end  */
+
+.yellow_container {
+
+    background-color: #ede734;
+    padding: 30px 20px;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+}
+
+.yellow_container_heading {
+    width: 60%;
+    font-size: 30px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.yellow_container_heading>div {
+    position: relative;
+    width: auto;
+}
+
+.yellow_container_btn {
+    position: absolute;
+    bottom: 4px;
+    left: -3px;
+    display: flex;
+    padding: 15px 29px;
+    background-color: black;
+    color: white;
+    border: transparent;
+}
+
+.btn-back {
+    width: 130px;
+    height: 43px;
+    border: 1px solid black;
+}
+
+@media only screen and (min-width:0px)and (max-width:960px) {
+    .yellow_container_heading {
+        width: 100%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .yellow_container_heading>div {
+        margin-top: 10px;
+    }
+
+}

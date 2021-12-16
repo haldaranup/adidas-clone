@@ -120,3 +120,4 @@ function displaybestOfAdidasData(arr) {
         document.querySelector("#bestOfAdidas").append(div);
     });
 }
+

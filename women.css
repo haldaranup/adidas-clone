@@ -1,10 +1,15 @@
 section {
     padding: 0px 12px;
-    margin: 100px 0px;
+    margin: 80px 0px;
 }
 
 section>div>div:hover {
     cursor: pointer;
+}
+
+#productSection>section>h1 {
+    margin: 20px 0px;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
 }
 
 #displayContents>div,
@@ -12,7 +17,7 @@ section>div>div:hover {
 #bestOfAdidas>div {
     /* border: 1px solid black; */
     min-width: 21%;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
     position: relative;
 }
 
@@ -20,25 +25,40 @@ section>div>div:hover {
 #womenOriginals,
 #bestOfAdidas {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
     padding-right: 20px;
 }
+#displayContents{
+    height: 525px;
+}
 
+#womenOriginals,
+#bestOfAdidas{
+    height: 380px;
+}
+#womenOriginals>div:hover,
+#bestOfAdidas>div:hover{
+    border: 1px solid black;
+}
 .wishlistSymbol {
     position: absolute;
     top: 16px;
     right: 16px;
+}
+#productSection a:hover{
+    background-color: black;
+    color: white;
 }
 
 .price1 {
     background-color: white;
     padding: 0px 5px;
     position: absolute;
-    bottom: 50px;
-    left: 16px;
+    top: 225px;
+    left: 0px;
 }
 
 .price {
@@ -46,7 +66,7 @@ section>div>div:hover {
     padding: 0px 5px;
     position: absolute;
     top: 225px;
-    left: 16px;
+    left: 0px;
 }
 
 img {
@@ -68,6 +88,9 @@ a {
     color: black;
     font-size: 13px;
     font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    
 }
 
 h6 {
@@ -89,17 +112,21 @@ h6 {
     width: 150px;
     padding: 15px;
 }
+#categoryShop>div>div:hover{
+    color: grey;
+}
 
 #categoryShop {
     display: flex;
     grid-gap: 10px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
 }
 
 #womenDescription {
     margin: auto;
     width: 650px;
     text-align: center;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
 }
 
 #womenDescription>p {
@@ -110,10 +137,12 @@ h6 {
 /* -------------------------------------------- */
 
 #container_banner {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin: 50px auto;
-    height: 400px;
+    height: 250px;
+    
 }
 
 .container_banneer_img1 {
@@ -132,7 +161,7 @@ h6 {
 .container_banneer_img1>h5 {
     text-decoration: underline;
     margin-top: 10px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
     font-size: 12px;
     letter-spacing: 2px;
 }
@@ -325,3 +354,56 @@ h6 {
 
 
 /* poster media queries end  */
+
+.yellow_container {
+
+    background-color: #ede734;
+    padding: 30px 20px;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+}
+
+.yellow_container_heading {
+    width: 60%;
+    font-size: 30px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.yellow_container_heading>div {
+    position: relative;
+    width: auto;
+}
+
+.yellow_container_btn {
+    position: absolute;
+    bottom: 4px;
+    left: -3px;
+    display: flex;
+    padding: 15px 29px;
+    background-color: black;
+    color: white;
+    border: transparent;
+}
+
+.btn-back {
+    width: 130px;
+    height: 43px;
+    border: 1px solid black;
+}
+
+@media only screen and (min-width:0px)and (max-width:960px) {
+    .yellow_container_heading {
+        width: 100%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .yellow_container_heading>div {
+        margin-top: 10px;
+    }
+
+}
