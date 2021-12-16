@@ -122,6 +122,7 @@ function displayData(arr) {
         var div = document.createElement("div");
         var img = document.createElement("img");
         var symDiv = document.createElement("div");
+        var cartSymDiv = document.createElement("div");
         var priceDiv = document.createElement("div");
         var name = document.createElement("h6");
         var type = document.createElement("h6");
@@ -130,6 +131,8 @@ function displayData(arr) {
         img.setAttribute("src", element.imgURL);
         symDiv.innerHTML = '<i class="far fa-heart ">';
         symDiv.setAttribute("class", "wishlistSymbol");
+        cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartSymDiv.setAttribute("class","cartSym");
         if (element.price == "Sold out") {
             priceDiv.innerHTML = '<p>' + element.price + '</p>';
         } else if (element.price != "") {
@@ -141,7 +144,7 @@ function displayData(arr) {
         type.textContent = element.type;
         neworNot.textContent = element.new;
 
-        div.append(img, symDiv, priceDiv, name, type, neworNot);
+        div.append(img, symDiv,cartSymDiv, priceDiv, name, type, neworNot);
         document.querySelector("#menOriginals").append(div);
     });
 }
@@ -152,6 +155,7 @@ function displaybestOfAdidasData(arr) {
         var div = document.createElement("div");
         var img = document.createElement("img");
         var symDiv = document.createElement("div");
+        var cartSymDiv = document.createElement("div");
         var priceDiv = document.createElement("div");
         var name = document.createElement("h6");
         var type = document.createElement("h6");
@@ -159,12 +163,14 @@ function displaybestOfAdidasData(arr) {
         img.setAttribute("src", element.imgURL);
         symDiv.innerHTML = '<i class="far fa-heart ">';
         symDiv.setAttribute("class", "wishlistSymbol");
+        cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartSymDiv.setAttribute("class","cartSym");
         priceDiv.setAttribute("class", "price");
         priceDiv.innerHTML = '<p>' + "Rs. " + element.price + '</p>';
         name.textContent = element.name;
         type.textContent = element.type;
 
-        div.append(img, symDiv, priceDiv, name, type);
+        div.append(img, symDiv,cartSymDiv, priceDiv, name, type);
         document.querySelector("#bestOfAdidas").append(div);
     });
 }

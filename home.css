@@ -1,4 +1,5 @@
-* {
+.nav *,
+footer{
     font-family: AdihausDIN, Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     margin: auto;
@@ -138,9 +139,9 @@
     display: flex;
 }
 
-.center {
+/* .center {
     height: 1400px;
-}
+} */
 
 
 .icons {
@@ -154,7 +155,8 @@
     margin-right: 10px;
 }
 
-.fas, .far {
+.fas,
+.far {
     color: #000000;
 }
 

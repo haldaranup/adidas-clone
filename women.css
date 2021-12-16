@@ -1,4 +1,4 @@
-section {
+#productSection {
     padding: 0px 12px;
     margin: 80px 0px;
 }
@@ -45,8 +45,22 @@ section>div>div:hover {
 }
 .wishlistSymbol {
     position: absolute;
-    top: 16px;
+    top: 4%;
     right: 16px;
+}
+.wishlistSymbol:hover{
+    font-size: 25px;
+}
+.cartSym {
+    position: absolute;
+    top: 58%;
+    right: 16px;
+    font-size: 30px;
+    color: rgb(54, 54, 54);
+}
+.cartSym:hover{
+    color: rgb(14, 14, 14);
+    font-size: 35px;
 }
 #productSection a:hover{
     background-color: black;
@@ -69,22 +83,22 @@ section>div>div:hover {
     left: 0px;
 }
 
-img {
+#productSection img {
     width: 100%;
 }
 
-h4 {
+#productSection h4 {
     margin: 5px 0px;
     font-size: 16px;
 }
 
-p {
+#productSection p {
     margin: 10px 0px;
     font-size: 16px;
     color: rgb(44, 44, 44);
 }
 
-a {
+#productSection a {
     color: black;
     font-size: 13px;
     font-weight: 700;
@@ -93,7 +107,7 @@ a {
     
 }
 
-h6 {
+#productSection h6 {
     margin: 2px;
     font-weight: 100;
 }
@@ -276,9 +290,9 @@ h6 {
 
 /* poster css start */
 
-* {
+/* * {
     margin: 0px;
-}
+} */
 
 #poster {
     width: 100%;
