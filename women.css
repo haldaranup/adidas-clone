@@ -1,3 +1,8 @@
+ /* *{
+    margin: 0px;
+    overflow-x: hidden;
+} */
+
 #productSection {
     padding: 0px 12px;
     margin: 80px 0px;
@@ -56,8 +61,10 @@ section>div>div:hover {
     top: 58%;
     right: 16px;
     font-size: 30px;
-    color: rgb(54, 54, 54);
+    color: red;
+    /* border: 5px solid teal; */
 }
+
 .cartSym:hover{
     color: rgb(14, 14, 14);
     font-size: 35px;
@@ -138,6 +145,7 @@ section>div>div:hover {
 
 #womenDescription {
     margin: auto;
+    margin-bottom: 50px;
     width: 650px;
     text-align: center;
     font-family: AdineuePRO, Helvetica, Arial, sans-serif;
@@ -155,7 +163,7 @@ section>div>div:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin: 50px auto;
-    height: 250px;
+    height: 320px;
     
 }
 
@@ -229,10 +237,13 @@ section>div>div:hover {
         margin: 50px 0px;
     }
     .price {
-        top: 190px;
+        top: 50%;
     }
     .price1 {
-        bottom: 50px;
+        top: 50%;
+    }
+    .cartSym {
+        top: 45%;
     }
     #womenDescription {
         width: 90%;
@@ -280,10 +291,18 @@ section>div>div:hover {
         margin: 50px 0px;
     }
     .price {
-        top: 105px;
+        top: 55%;
     }
     .price1 {
-        bottom: 65px;
+        top: 55%;
+    }
+    .wishlistSymbol {
+        right: 10px;
+    }
+    .cartSym {
+        top: 30%;
+        right: 10px;
+        font-size: 20px;
     }
 }
 

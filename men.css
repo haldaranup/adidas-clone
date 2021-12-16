@@ -119,6 +119,7 @@ section>div>div:hover {
 
 #menDescription {
     margin: auto;
+    margin-bottom: 50px;
     width: 750px;
     text-align: center;
     font-family: AdineuePRO, Helvetica, Arial, sans-serif;;
