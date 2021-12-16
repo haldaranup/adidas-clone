@@ -298,10 +298,10 @@ section>div>div:hover {
     width: 100%;
     height: 100vh;
     min-height: 30vh;
-    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enIN/Images/ss22-ivp-5-launch-hp-v3-d_tcm209-819981.jpg");
-    background-size: cover;
+    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enIN/Images/Deepika_x_Marimekko_hp_mh_29th_Oct_tcm209-799926.jpg");
+    background-size: 100% 100%;
     display: flex;
-    align-items: center;
+    align-items: center; 
 }
 
 .poster_container {
@@ -346,8 +346,9 @@ section>div>div:hover {
     #poster {
         align-items: flex-end;
         height: 60vh;
-        background-size: cover;
+        background-size: 100% 100%;
         width: 100%;
+        background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/enIN/Images/Deepika_x_Marimekko_1200x1000_29th_Oct_T_tcm209-799925.jpg");
     }
     .poster_container {
         margin-bottom: 20px;
@@ -359,7 +360,7 @@ section>div>div:hover {
         align-items: flex-end;
         width: 100%;
         min-width: 100%;
-        background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_600,w_600/enIN/Images/ss22-ivp-5-launch-hp-v3-m_tcm209-819980.jpg");
+        background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_600,w_600/enIN/Images/Deepika_x_Marimekko_800x1000_29th_Oct_M_tcm209-799924.jpg");
     }
     .poster_container {
         margin-bottom: 20px;
