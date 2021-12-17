@@ -1,7 +1,7 @@
- /* *{
+ *{
     margin: 0px;
     overflow-x: hidden;
-} */
+}
 
 #productSection {
     padding: 0px 12px;
@@ -163,7 +163,6 @@ section>div>div:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin: 50px auto;
-    height: 320px;
     
 }
 
@@ -419,7 +418,7 @@ section>div>div:hover {
             bottom: 4px;
             left: -5px;
             display: flex;
-            padding: 15px 29px;
+            padding: 15px 19px;
             background-color: black;
             color: white;
             border: transparent;

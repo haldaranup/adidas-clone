@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 #productSection {
     padding: 0px 12px;
     margin: 80px 0px;
