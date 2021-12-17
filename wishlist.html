@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="wishlist.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -64,8 +65,11 @@
                         <div><input class="search displaynone" type="sreach" placeholder="Search"></div>
 
                         <div class="disicon"><a href=""><i class="fas fa-user-circle"></i></a></div>
+                        <p id="wishlistLen">45</p>
                         <div class="disicon heart"><a href=""><i class="far fa-heart"></i></a></div>
+
                         <div class="searchicon"><a href=""><i class="fas fa-search"></i></a></div>
+                        <p id="cartLen">45</p>
                         <div class="disicon"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
                     </div>
                 </div>
@@ -88,8 +92,14 @@
                 </div>
             </section>
             <section>
-                <div>
-                    <h1 class="mywish">MY WISHLIST</h1>
+                <h1 class="mywish">MY WISHLIST</h1>
+                <p class=" mywish mywish_length"><span id="myWishLen"></span> items </p>
+                <div style="display: flex; justify-content: space-around;">
+                    <!-- <div id="wishContain"> -->
+
+                    <div id="womenOriginals">
+                    </div>
+
                     <div class="help">
                         <h1>NEED HELP?</h1>
 
@@ -228,6 +238,7 @@
     </div>
 
     <script src="toggle.js"></script>
+    <script src="wishlist.js"></script>
 </body>
 
 </html>

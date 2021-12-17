@@ -67,6 +67,7 @@
     font-size: 11px;
     background-color: #000000;
     display: flex;
+    justify-content: space-around;
 }
 
 .uppernav>p>a {
@@ -82,7 +83,7 @@
     text-align: right;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     height: 32px;
     width: 100%;
     margin-right: 2%;
@@ -120,6 +121,7 @@
     font-size: 14px;
     letter-spacing: 2px;
     word-spacing: 5px;
+    justify-content:space-between;
 }
 
 .cat>p>a {
@@ -142,14 +144,40 @@
 .icons {
     display: flex;
     margin-right: 10px;
+    position: relative;
+    font-size:25px;
+
+}
+#wishlistLen{
+position: absolute;
+top:-4px;
+right:11%;
+border-radius: 50%;
+background-color:#197fb6;
+padding:5px;
+font-size:12px;
+font-weight:bold;
+color:white;
 
 }
 
 .disicon {
     margin: 15px;
     margin-right: 10px;
+    position: relative;
 }
+#cartLen{
+    position: absolute;
+top:-4px;
+right:-2%;
+border-radius: 50%;
+background-color:#197fb6;
+padding:5px;
+font-size:12px;
+font-weight:bold;
+color:white;
 
+}
 .fas, .far {
     color: #000000;
 }
@@ -195,10 +223,11 @@
 }
 
 .help{
-    margin-left: 70%;
-    line-height: 30px;
-    margin-bottom: 50px;
-    margin-top: -8%;
+    margin-top: 0px;
+    /* margin-left: 70%; */
+    /* line-height: 30px; */
+    /* margin-bottom: 50px; */
+    /* margin-top: -8%; */
 }
 .help>p>a{
     color: #000000;
@@ -206,7 +235,7 @@
 }
 .mywish{
     font-size: 30px;
-    margin: 3% 0 5% 15%;
+    margin: 3% 0 2% 15%;
 }
 /* yellow container css end */
 
@@ -379,4 +408,117 @@
         display: block;
     }
 
+}
+
+/* ------------------------------ */
+
+
+#womenOriginals>div {
+    /* border: 1px solid black; */
+    width: 19%;
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+}
+
+.wishlistSymbol {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.price1 {
+    background-color: white;
+    padding: 0px 5px;
+    position: absolute;
+    bottom: 50px;
+    left: 16px;
+}
+
+.price {
+    background-color: white;
+    padding: 0px 5px;
+    position: absolute;
+    bottom: 40px;
+    left: 16px;
+}
+
+
+#womenOriginals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 60%;
+    /* width: 100%; */
+    /* overflow-x: scroll;
+    width: 1350px; */
+    padding-right: 20px;
+}
+#womenOriginals>div{
+    width: 70%;
+}
+img {
+    width: 100%;
+}
+
+h4 {
+    margin: 5px 0px;
+    font-size: 16px;
+}
+
+p {
+    margin: 10px 0px;
+    font-size: 16px;
+    color: rgb(44, 44, 44);
+}
+
+a {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+h6 {
+    margin: 2px;
+    font-weight: 100;
+}
+
+#categoryShop>div {
+    /* border: 1px solid red; */
+    width: 300px;
+}
+
+#categoryShop>div>div {
+    border: 1px solid black;
+    margin-top: 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    width: 150px;
+    padding: 15px;
+}
+
+#categoryShop {
+    display: flex;
+    grid-gap: 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#womenDescription {
+    margin: auto;
+    width: 650px;
+    text-align: center;
+}
+
+#womenDescription>p {
+    font-size: 19px;
+}
+.cartSym{
+      position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+.mywish_length{
+    font-size:24px;
+    margin-top:5px;
+    font-weight: bold;
 }
