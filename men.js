@@ -116,9 +116,12 @@ var bestOfAdidas = [{
 ];
 var wishlist = JSON.parse(localStorage.getItem("wishlistdb")) || []
 var len = wishlist.length;
+var cartlist = JSON.parse(localStorage.getItem("cartlistdb")) || []
+var le = cartlist.length;
 
 displayData(menOriginalsData);
 document.querySelector("#wishlistLen").textContent = len;
+document.querySelector("#cartLen").textContent = le;
 
 
 
@@ -166,6 +169,9 @@ function displayData(arr) {
         }
         cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
         cartSymDiv.setAttribute("class", "cartSym");
+        cartSymDiv.addEventListener("click", function () {
+            addtocart(element, cartSymDiv);
+        })
 
         if (element.price == "Sold out") {
             priceDiv.innerHTML = '<p>' + element.price + '</p>';
@@ -224,6 +230,9 @@ function displaybestOfAdidasData(arr) {
 
         cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
         cartSymDiv.setAttribute("class", "cartSym");
+        cartSymDiv.addEventListener("click", function () {
+            addtocart(element, cartSymDiv);
+        })
 
         priceDiv.setAttribute("class", "price");
         priceDiv.innerHTML = '<p>' + "Rs. " + element.price + '</p>';
@@ -238,5 +247,11 @@ function deleteRow(index) {
     console.log("delete");
     wishlist.splice(index, 1)
     localStorage.setItem("wishlistdb", JSON.stringify(wishlist));
+
+}
+function addtocart(element, cartSymDiv) {
+    cartSymDiv.innerHTML = '<i class="fas fa-shopping-bag"></i>';
+    cartlist.push(element);
+    localStorage.setItem('cartlistdb', JSON.stringify(cartlist));
 
 }
