@@ -48,6 +48,7 @@ span.price{
     border: 1px solid grey;
     display: flex;
     font-size: small;
+    /* height: 20%; */
 }
 .price1{
     float: right;
@@ -63,7 +64,7 @@ span.price{
 }
 #sec{
     padding: 2%;
-   
+    
 }
 #sec>b{
     color: black;
@@ -78,4 +79,22 @@ span.price{
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+  }
+  #link>p:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    max-width: 170px;
+  }
+  #last{
+    font-size: small;
+    text-decoration: underline;
+    color: grey;
+
+  }
+  #last>p:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    max-width: 190px;
   }

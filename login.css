@@ -337,6 +337,7 @@ height: 100vh;
     cursor: pointer;
      background-color: black;
      color: white;
+     max-width: 70px;
 }
 @media only screen and(min-width: 0px) and (max-width: 375px){
      #container{
