@@ -78,7 +78,7 @@
             <div class="backwomen">
                 <div><a href="">Back</a></div>
                 <div><a href="">Home</a></div>
-                <div><a href="">Women</a></div>
+                <div><a href="">All products</a></div>
             </div>
             <h1 class="woriginals">ALL PRODUCTS</h1>
             <p>Our adidas Originals range contains all the classic adidas clothing that you've come to love over
@@ -86,21 +86,22 @@
             <div class="hrline"></div>
 
             <div class="selectedcat">
-                <select name="" id="">
+                <select name="" id="sortByGender" onchange="sortByGender()">
                     <option value="">GENDER</option>
-                    <option value="">MALE</option>
-                    <option value="">FEMALE</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="kids">Kids</option>
                 </select>
                 <select name="" id="">
-                    <option value="">TYPE</option>
-                    <option value="">L</option>
-                    <option value="">M</option>
-                    <option value="">XL</option>
+                    <option value="">PRODUCT TYPE</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
                 </select>
-                <select name="" id="">
-                    <option value="">DIVISION</option>
-                    <option value="">ALL</option>
-                    <option value="">SIZE</option>
+                <select name="" id="sortByPrice" onchange="displaysorted()">
+                    <option value="">SORT By</option>
+                    <option value="lowToHigh">Price [low - high]</option>
+                    <option value="highToLow">Price [high - low]</option>
                 </select>
 
             </div>

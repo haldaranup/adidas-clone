@@ -48,6 +48,24 @@ section>div>div:hover {
 #bestOfAdidas>div:hover{
     border: 1px solid black;
 }
+
+#womenHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+#womenHeading>a{
+    color: black;
+    font-size: 13px;
+    letter-spacing: 3px;
+    height: 60%;
+    margin-top: 20px;
+}
+#womenHeading>h1{
+    margin: 20px 0px;
+}
+
 .wishlistSymbol {
     position: absolute;
     top: 4%;
@@ -105,7 +123,7 @@ section>div>div:hover {
     color: rgb(44, 44, 44);
 }
 
-#productSection a {
+#productSection>section:nth-child(1) a {
     color: black;
     font-size: 13px;
     font-weight: 700;
@@ -130,7 +148,7 @@ section>div>div:hover {
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: bolder;
-    width: 150px;
+    width: 190px;
     padding: 15px;
 }
 #categoryShop>div>div:hover{

@@ -234,7 +234,7 @@ function displayData(arr) {
 
 function displaysorted() {
     document.querySelector("#allProductDiv").innerHTML = "";
-    var sortValue = document.querySelector("#sortBy").value;
+    var sortValue = document.querySelector("#sortByPrice").value;
     var sortedarr = allProductData;
     if (sortValue == "lowToHigh") {
         sortedarr = sortedarr.sort(function (a, b) {
@@ -257,4 +257,19 @@ function addtocart(element, cartSymDiv) {
     cartlist.push(element);
     localStorage.setItem('cartlistdb', JSON.stringify(cartlist));
 
+}
+var sortedarr = allProductData;
+function sortByGender(){
+    document.querySelector("#allProductDiv").innerHTML = "";
+    var sortValue = document.querySelector("#sortByGender").value;
+    
+    if(sortValue == "male"){
+        sortedarr = sortedarr.filter(function(element){
+            return (element.gender == "Male");
+        });
+        displayData(sortedarr);
+    }
+    else {
+        displayData(allProductData);
+    }
 }

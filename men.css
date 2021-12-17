@@ -48,6 +48,24 @@ section>div>div:hover {
 #bestOfAdidas>div:hover{
     border: 1px solid black;
 }
+
+#menHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+#menHeading>a{
+    color: black;
+    font-size: 13px;
+    letter-spacing: 3px;
+    height: 60%;
+    margin-top: 10px;
+}
+#menHeading>h1{
+    margin-bottom: 20px;
+}
+
 .wishlistSymbol {
     position: absolute;
     top: 16px;
@@ -106,7 +124,7 @@ section>div>div:hover {
     color: rgb(44, 44, 44);
 }
 
-#productSection a {
+#productSection>section:nth-child(2) a {
     color: black;
     font-size: 13px;
     font-weight: 700;

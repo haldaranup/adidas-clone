@@ -511,6 +511,7 @@ color:white;
     flex-wrap: wrap;
     gap: 3px;
     justify-content: center;
+    margin-top: 20px;
 }
 #allProductDiv>div{
     width: 24%;
@@ -527,7 +528,7 @@ color:white;
 }
 #allProductDiv .price{
     position: absolute;
-    top: 66%;
+    top: 68%;
     background-color: white;
     padding: 0px 5px;
     font-size: 16px;
