@@ -1,6 +1,6 @@
- *{
-    margin: 0px;
-    overflow-x: hidden;
+*{
+    box-sizing: border-box;
+    margin:0px;
 }
 
 #productSection {
@@ -316,8 +316,8 @@ section>div>div:hover {
     width: 100%;
     height: 100vh;
     min-height: 30vh;
-    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enIN/Images/Deepika_x_Marimekko_hp_mh_29th_Oct_tcm209-799926.jpg");
-    background-size: 100% 100%;
+    background-image: url("https://images.pexels.com/photos/3762927/pexels-photo-3762927.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
     display: flex;
     align-items: center; 
 }
@@ -364,7 +364,7 @@ section>div>div:hover {
     #poster {
         align-items: flex-end;
         height: 60vh;
-        background-size: 100% 100%;
+        background-size: cover;
         width: 100%;
         background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/enIN/Images/Deepika_x_Marimekko_1200x1000_29th_Oct_T_tcm209-799925.jpg");
     }
@@ -387,9 +387,66 @@ section>div>div:hover {
 
 
 /* poster media queries end  */
+/* bar css start */
+.bar_heading{
+    text-align: center;
+    margin: 30px;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+    font-size:25px;
+}
+ #bar {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            background-color: #e9ecef;
+            padding: 15px 20px 15px 20px ;
+            font-size: 14px;
+            margin: auto;
+            margin-bottom: 80px;
+
+        }
+
+        #bar>div {
+            margin: 0px 20px 0px 20px;
+        }
+
+        @media only screen and (min-width:600px)and (max-width:960px) {
+            #bar{
+                /* overflow-x: scroll; */
+               display:grid;
+               grid-template-columns: repeat(5, 1fr);
+               grid-gap:10px;
+               grid-template-rows: repeat(1,auto);
+             
+
+            }
+             /* #bar>div{
+                 display: flex;
+                flex-flow: row  ;
+             } */
+
+
+        }
+           @media only screen and (min-width:0px)and (max-width:600px) {
+            #bar{
+                display:grid;
+               grid-template-columns: repeat(5, 1fr);
+               grid-gap:10px;
+               grid-template-rows: repeat(1,auto);
+               width:fit-content;
+            }
+            
+        #bar>div {
+            margin: 0px 3px 0px 3px;
+            font-size:12px;
+        }
+
+
+        }
+/* bar css end */
   /* yellow container css start */
 
-        .yellow_container {
+          .yellow_container {
 
             background-color: #ede734;
             padding: 30px 20px;
@@ -418,7 +475,7 @@ section>div>div:hover {
             bottom: 4px;
             left: -5px;
             display: flex;
-            padding: 15px 19px;
+            padding: 15px 29px;
             background-color: black;
             color: white;
             border: transparent;
