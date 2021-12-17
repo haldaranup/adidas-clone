@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <style>
+        #allProductDiv *{
+            box-sizing: border-box;
+        }
+        #allProductDiv{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            justify-content: center;
+        }
+        #allProductDiv>div{
+            width: 24%;
+            position: relative;
+            padding-bottom: 5%;
+        }
+        #allProductDiv>div:hover{
+            border: 1px solid black;
+        }
+        #allProductDiv img{
+            width: 100%;
+            height: auto;
+        }
+        #allProductDiv .price{
+            position: absolute;
+            top: 66%;
+            background-color: white;
+            padding: 0px 5px;
+            font-size: 16px;
+        }
+        #allProductDiv>div>p:nth-child(n+3){
+            margin: 5px auto;
+            font-size: 15px;
+        }
+        #allProductDiv .wishlistSymbol{
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            font-size: 25px;
+        }
+        #allProductDiv .cartSym{
+            position: absolute;
+            right: 5%;
+            top: 65%;
+            color: rgb(42, 42, 42);
+            font-size: 25px;
+        }
+        @media screen and (min-width:375px) and (max-width:769px) {
+            #allProductDiv>div{
+                width: 32%;
+            }
+        }
+        @media screen and (min-width:0px) and (max-width:376px) {
+            #allProductDiv>div{
+                width: 49.5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <select name="" id="sortBy" onchange="displaysorted()">
+        <option value="">SORT By</option>
+        <option value="lowToHigh">Price [low - high]</option>
+        <option value="highToLow">Price [high - low]</option>
+    </select>
+    <div id="allProductDiv" >
+        
+    </div>
+</body>
+</html>
+
+<script src="allProductData.js"></script>
