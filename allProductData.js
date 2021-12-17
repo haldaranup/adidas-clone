@@ -115,108 +115,146 @@ var allProductData = [{
     price: "1399.50",
     name: "Disney Mickey Mouse Teet",
     type: "Sportswear",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/692dca8d91cc48098783acc9016fbcb3_9366/adidas_ZX_8000_x_LEGO(r)_Shoes_Black_GZ8216_01_standard.jpg",
     price: "4000.00",
     name: "adidas ZX 8000 x LEGO",
     type: "Kids Lifestyle",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/baf1dec5b4f44d27896dace100ae5d7c_9366/GT9484_01_laydown.jpg",
     price: "3599.00",
     name: "Disney Comfy Princesses Pants",
     type: "Sportswear",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/88ec36d92a5840f49c51ab1a01113414_9366/EI9897_01_laydown.jpg",
     price: "1400.00",
     name: "Juventus Home Shorts",
     type: "Performance",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/06a1bc30cca84cbdbf07ad19010fcfd7_9366/H16387_00_plp_standard.jpg",
     price: "2099.50",
     name: "Marvel Spider-Man Primegreen Backpacks",
     type: "Performance",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/450b535929674340a0a5ad120115b838_9366/GU8814_00_plp_standard.jpg",
     price: "2099.50",
     name: "Disney Princesses Primegreen Backpack",
     type: "Performance",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/526c5eda6cdb429a8a45ad2400c382e0_9366/adidas_x_LEGO(r)_Sport_Shoes_Yellow_FZ5439_01_standard.jpg",
     price: "6599.00",
     name: "adidas x LEGO",
     type: "Kids Running",
-    for: "kids"
+    gender: "kids"
 },
 {
     imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d8b19f5114d24d878e72ad2600f615cd_9366/adidas_Forta_Run_x_LEGO(r)_VIDIYOtm_Shoes_Black_G57947_01_standard.jpg",
     price: "6599.00",
     name: "adidas Forta Run",
     type: "Kids Running",
-    for: "kids"
+    gender: "kids"
 }
 ];
+var wishlist = JSON.parse(localStorage.getItem("wishlistdb")) || []
+var len = wishlist.length;
+var cartlist = JSON.parse(localStorage.getItem("cartlistdb")) || []
+var le = cartlist.length;
 
 displayData(allProductData);
+document.querySelector("#wishlistLen").textContent = len;
+document.querySelector("#cartLen").textContent = le;
 
-function displayData(arr){
-    arr.map(function(element,index){
+function displayData(arr) {
+    arr.map(function (element, index) {
         var div = document.createElement("div");
 
         var img = document.createElement("img");
-        img.setAttribute("src",element.imgURL);
+        img.setAttribute("src", element.imgURL);
 
         var price = document.createElement("p");
         price.textContent = "Rs. " + element.price;
-        price.setAttribute("class","price");
-        
+        price.setAttribute("class", "price");
+
         var symDiv = document.createElement("div");
         symDiv.innerHTML = '<i class="far fa-heart ">';
         symDiv.setAttribute("class", "wishlistSymbol");
-        
+        var count = 1
+
+        symDiv.addEventListener("click", symbalcolor)
+        function symbalcolor() {
+            count++
+            if (count % 2 == 0) {
+                console.log("solid");
+                symDiv.innerHTML = '<i class="fas fa-heart"></i>';
+                wishlist.push(element);
+                localStorage.setItem('wishlistdb', JSON.stringify(wishlist));
+                displaybestOfAdidasData(bestOfAdidas);
+
+            }
+            else {
+                console.log("dull");
+                symDiv.innerHTML = '<i class="far fa-heart"></i>';
+                symDiv.addEventListener("click", function () {
+                    deleteRow(index, count)
+                })
+
+            }
+
+        }
+
         var cartSymDiv = document.createElement("div");
         cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
-        cartSymDiv.setAttribute("class","cartSym");
-        
+        cartSymDiv.setAttribute("class", "cartSym");
+        cartSymDiv.addEventListener("click", function () {
+            addtocart(element, cartSymDiv);
+        })
+
         var name = document.createElement("p");
         name.textContent = element.name;
-        
+
         var type = document.createElement("p");
         type.textContent = element.type;
 
-        div.append(img,price,symDiv,cartSymDiv,name,type);
+        div.append(img, price, symDiv, cartSymDiv, name, type);
         document.querySelector("#allProductDiv").append(div);
     });
 }
 
-function displaysorted(){
+function displaysorted() {
     document.querySelector("#allProductDiv").innerHTML = "";
     var sortValue = document.querySelector("#sortBy").value;
-    var sortedarr =  allProductData;
-    if(sortValue == "lowToHigh"){
-        sortedarr = sortedarr.sort(function(a,b){
+    var sortedarr = allProductData;
+    if (sortValue == "lowToHigh") {
+        sortedarr = sortedarr.sort(function (a, b) {
             return Number(a.price) - Number(b.price);
         });
         displayData(sortedarr);
     }
-    else if(sortValue == "highToLow"){
-        sortedarr = sortedarr.sort(function(a,b){
+    else if (sortValue == "highToLow") {
+        sortedarr = sortedarr.sort(function (a, b) {
             return Number(b.price) - Number(a.price);
         });
         displayData(sortedarr);
     }
-    else{
+    else {
         displayData(allProductData);
     }
+}
+function addtocart(element, cartSymDiv) {
+    cartSymDiv.innerHTML = '<i class="fas fa-shopping-bag"></i>';
+    cartlist.push(element);
+    localStorage.setItem('cartlistdb', JSON.stringify(cartlist));
+
 }

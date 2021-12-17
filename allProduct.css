@@ -184,13 +184,44 @@
 .icons {
     display: flex;
     margin-right: 10px;
+    position: relative;
 
+}
+#wishlistLen{
+position: absolute;
+top:-4px;
+right:11%;
+border-radius: 50%;
+background-color:#197fb6;
+padding:5px;
+font-size:12px;
+font-weight:bold;
+color:white;
+
+}
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+   #wishlistLen{
+       display:none;
+   } 
 }
 
 .disicon {
     margin: 15px;
     margin-right: 10px;
 }
+#cartLen{
+    position: absolute;
+top:-4px;
+right:-2%;
+border-radius: 50%;
+background-color:#197fb6;
+padding:5px;
+font-size:12px;
+font-weight:bold;
+color:white;
+
+}
+
 
 .fas, .far {
     color: #000000;
@@ -473,6 +504,7 @@
 
 #allProductDiv *{
     box-sizing: border-box;
+
 }
 #allProductDiv{
     display: flex;
@@ -487,6 +519,7 @@
 }
 #allProductDiv>div:hover{
     border: 1px solid black;
+   
 }
 #allProductDiv img{
     width: 100%;
@@ -498,6 +531,7 @@
     background-color: white;
     padding: 0px 5px;
     font-size: 16px;
+    
 }
 #allProductDiv>div>p:nth-child(n+3){
     margin: 5px auto;
@@ -508,6 +542,7 @@
     right: 5%;
     top: 5%;
     font-size: 25px;
+     cursor: pointer;
 }
 #allProductDiv .cartSym{
     position: absolute;
@@ -515,6 +550,7 @@
     top: 65%;
     color: rgb(42, 42, 42);
     font-size: 25px;
+     cursor: pointer;
 }
 @media screen and (min-width:375px) and (max-width:769px) {
     #allProductDiv>div{
