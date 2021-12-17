@@ -114,8 +114,16 @@ var bestOfAdidas = [{
 
 }
 ];
+var wishlist = JSON.parse(localStorage.getItem("wishlistdb")) || []
+var len = wishlist.length;
+var cartlist = JSON.parse(localStorage.getItem("cartlistdb")) || []
+var le = cartlist.length;
 
 displayData(menOriginalsData);
+document.querySelector("#wishlistLen").textContent = len;
+document.querySelector("#cartLen").textContent = le;
+
+
 
 function displayData(arr) {
     arr.map(function (element, index) {
@@ -130,9 +138,41 @@ function displayData(arr) {
 
         img.setAttribute("src", element.imgURL);
         symDiv.innerHTML = '<i class="far fa-heart ">';
+
+
+
+
         symDiv.setAttribute("class", "wishlistSymbol");
+
+
+        var count = 1
+
+        symDiv.addEventListener("click", symbalcolor)
+        function symbalcolor() {
+            count++
+            if (count % 2 == 0) {
+                console.log("solid");
+                symDiv.innerHTML = '<i class="fas fa-heart"></i>';
+                wishlist.push(element);
+                localStorage.setItem('wishlistdb', JSON.stringify(wishlist));
+
+            }
+            else {
+                console.log("dull");
+                symDiv.innerHTML = '<i class="far fa-heart"></i>';
+                symDiv.addEventListener("click", function () {
+                    deleteRow(index, count)
+                })
+
+            }
+
+        }
         cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
-        cartSymDiv.setAttribute("class","cartSym");
+        cartSymDiv.setAttribute("class", "cartSym");
+        cartSymDiv.addEventListener("click", function () {
+            addtocart(element, cartSymDiv);
+        })
+
         if (element.price == "Sold out") {
             priceDiv.innerHTML = '<p>' + element.price + '</p>';
         } else if (element.price != "") {
@@ -144,7 +184,7 @@ function displayData(arr) {
         type.textContent = element.type;
         neworNot.textContent = element.new;
 
-        div.append(img, symDiv,cartSymDiv, priceDiv, name, type, neworNot);
+        div.append(img, symDiv, cartSymDiv, priceDiv, name, type, neworNot);
         document.querySelector("#menOriginals").append(div);
     });
 }
@@ -162,16 +202,56 @@ function displaybestOfAdidasData(arr) {
 
         img.setAttribute("src", element.imgURL);
         symDiv.innerHTML = '<i class="far fa-heart ">';
+        var count = 1
+
+        symDiv.addEventListener("click", symbalcolor)
+        function symbalcolor() {
+            count++
+            if (count % 2 == 0) {
+                console.log("solid");
+                symDiv.innerHTML = '<i class="fas fa-heart"></i>';
+                wishlist.push(element);
+                localStorage.setItem('wishlistdb', JSON.stringify(wishlist));
+
+            }
+            else {
+                console.log("dull");
+                symDiv.innerHTML = '<i class="far fa-heart"></i>';
+                symDiv.addEventListener("click", function () {
+                    deleteRow(index, count)
+                })
+
+            }
+
+        }
+
         symDiv.setAttribute("class", "wishlistSymbol");
+
+
         cartSymDiv.innerHTML = '<i class="fas fa-cart-plus"></i>';
-        cartSymDiv.setAttribute("class","cartSym");
+        cartSymDiv.setAttribute("class", "cartSym");
+        cartSymDiv.addEventListener("click", function () {
+            addtocart(element, cartSymDiv);
+        })
+
         priceDiv.setAttribute("class", "price");
         priceDiv.innerHTML = '<p>' + "Rs. " + element.price + '</p>';
         name.textContent = element.name;
         type.textContent = element.type;
 
-        div.append(img, symDiv,cartSymDiv, priceDiv, name, type);
+        div.append(img, symDiv, cartSymDiv, priceDiv, name, type);
         document.querySelector("#bestOfAdidas").append(div);
     });
 }
+function deleteRow(index) {
+    console.log("delete");
+    wishlist.splice(index, 1)
+    localStorage.setItem("wishlistdb", JSON.stringify(wishlist));
 
+}
+function addtocart(element, cartSymDiv) {
+    cartSymDiv.innerHTML = '<i class="fas fa-shopping-bag"></i>';
+    cartlist.push(element);
+    localStorage.setItem('cartlistdb', JSON.stringify(cartlist));
+
+}

@@ -147,12 +147,42 @@ footer{
 .icons {
     display: flex;
     margin-right: 10px;
+    position: relative;
 
+}
+#wishlistLen{
+position: absolute;
+top:-4px;
+right:11%;
+border-radius: 50%;
+background-color:#197fb6;
+padding:5px;
+font-size:12px;
+font-weight:bold;
+color:white;
+
+}
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+   #wishlistLen{
+       display:none;
+   } 
 }
 
 .disicon {
     margin: 15px;
     margin-right: 10px;
+}
+#cartLen{
+    position: absolute;
+top:-4px;
+right:-2%;
+border-radius: 50%;
+background-color:#197fb6;
+padding:5px;
+font-size:12px;
+font-weight:bold;
+color:white;
+
 }
 
 .fas,
