@@ -1,0 +1,81 @@
+#page{
+    display: flex;
+    justify-content: space-around;
+    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+}
+#check{
+    display: flex;
+    flex-direction: column;
+    
+}
+#order{
+    font-size: x-small;
+    border: 1px solid rgb(209, 206, 206);
+    margin-top: 30px;
+    padding: 2%;
+    /* color: grey; */
+}
+#link{
+    font-size: small;
+    margin-top: 20px;
+}
+#link>input{
+    width: 200px;
+    /* margin-top: 20px; */
+    height: 30px;
+}
+#link>p{
+    text-decoration: underline;
+    color: grey;
+    font-size: small;
+}
+#button1{
+    color: white;
+    background-color: black;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 3%;
+    margin-top: 40px;
+    width: 100%;
+}
+span.price{
+    float: right;
+}
+#right{
+    width: 300px;
+}
+#prod{
+    border: 1px solid grey;
+    display: flex;
+    font-size: small;
+}
+.price1{
+    float: right;
+}
+#button{
+    color: white;
+    background-color: black;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 2%;
+    margin-top: 40px;
+    width: 40%;
+}
+#sec{
+    padding: 2%;
+   
+}
+#sec>b{
+    color: black;
+}
+#fir{
+    border: 1px solid black;
+    /* height: 40%; */
+}
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
