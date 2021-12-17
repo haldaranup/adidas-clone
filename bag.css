@@ -49,6 +49,7 @@ span.price{
     display: flex;
     font-size: small;
     /* height: 20%; */
+    width: 350px;
 }
 .price1{
     float: right;
@@ -63,8 +64,8 @@ span.price{
     width: 40%;
 }
 #sec{
-    padding: 2%;
-    
+    /* padding: 1%; */
+    display: flex;
 }
 #sec>b{
     color: black;
@@ -98,3 +99,4 @@ span.price{
     color: white;
     max-width: 190px;
   }
+  
