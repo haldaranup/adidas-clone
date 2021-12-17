@@ -14,7 +14,16 @@
     margin-top: 30px;
     padding: 2%;
     /* color: grey; */
+   
 }
+#order1{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
 #link{
     font-size: small;
     margin-top: 20px;
@@ -49,7 +58,7 @@ span.price{
     display: flex;
     font-size: small;
     /* height: 20%; */
-    width: 350px;
+    width: 550px;
 }
 .price1{
     float: right;
@@ -73,6 +82,7 @@ span.price{
 #fir{
     border: 1px solid black;
     /* height: 40%; */
+    /* width:100px; */
 }
 .close {
     color: black;
