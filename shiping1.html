@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <title>Shipping address</title>
     <style>
         *{
             /* margin-left: 30px; */
@@ -13,7 +14,7 @@
         #standardDelivery{
             display: flex;
             border: 0.5px solid rgb(197, 186, 186);
-            height: 100px;
+            height: 85px;
             width: 605px;   
             justify-content: space-between;  
             padding: 0px 12px; 
@@ -51,13 +52,16 @@
          color: gray;
        }
        #left{
-           margin-left: 30px;
+           margin-left: 60px;
        }
-       * {
+       #left p{
+           font-size: 14px;
+       }
+       /* * {
             font-family: AdihausDIN, Helvetica, Arial, sans-serif;
             box-sizing: border-box;
             margin: auto;
-        }
+        } */
 
         /* #container {
     width: 100%;
@@ -172,7 +176,8 @@
 
         .logodiv {
             display: flex;
-            margin-left: 2%;
+            margin: 3%;
+            
         }
 
         .cat {
@@ -342,7 +347,7 @@
 
         /* yellow container css start */
 
-        .yellow_container {
+        /* .yellow_container {
 
             background-color: #ede734;
             padding: 30px 20px;
@@ -401,7 +406,7 @@
                 margin-top: 10px;
             }
 
-        }
+        } */
 
         /* yellow container css end */
 
@@ -485,20 +490,76 @@
 
 
         }
+
+        #status {
+            display: flex;
+            margin-left: 2%;
+            width: 40%;
+            font-size: 14px;
+            justify-content: space-between;
+        }
+
+        #status>:nth-child(odd) {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+
+        }
+
+        #status>:nth-child(even) {
+            padding: 5px 10px;
+            font-weight: bolder;
+        }
+
+        #status>:nth-child(5),
+        #status>:nth-child(7) {
+            background-color: #767677;
+        }
+
+        #status>:nth-child(6),
+        #status>:nth-child(8) {
+            color: #767677;
+        }
+
+        .yellow_container_btn {
+            display: flex;
+            width: 180px;
+            padding: 16px 15px;
+            font-size: 12px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            background-color: black;
+            color: white;
+            border: transparent;
+            margin:40px auto 100px 40px;
+            justify-content: space-between;
+        }
+        .btn-back {
+            position: relative;
+            width: 180px;
+            height: 43px;
+            border: 1px solid black;
+            top: -140px;
+            left: 44px;
+        }
+        #orderButton{
+            position: relative;
+        }
     </style>
 </head>
 <body>
     <div id="container">
 
         <nav class="nav">
-            <div class="uppernav">
+            <!-- <div class="uppernav">
                 <p><a href="">SIGN UP & GET 15% OFF</a></p>
                 <p><a href="">QUICK EASY RETURNS ON PREPAID ORDERS</a></p>
                 <p><a href="">FREE DELIVERY FOR ALL ORDERS NOW</a></p>
-            </div>
+            </div> -->
 
             <div class="bottomnav">
-                <div class="firstnav displaynone">
+                <!-- <div class="firstnav displaynone">
                     <p><a href="">help</a></p>
                     <p><a href="">returns</a> </p>
                     <p><a href="">order tracker</a> </p>
@@ -519,14 +580,14 @@
                         <li><a href=""><strong>WOMEN</strong></a></li>
                         <li><a href=""><strong>KIDS</strong></a></li>
                         <li><a href="">LOG IN</a></li>
-                    </div>
+                    </div> -->
 
                     <div class="logodiv">
                         <a href=""><img class="adidaslogo"
                                 src="https://www.logosurfer.com/wp-content/uploads/2018/03/adidas-logo_0.png"
                                 alt=""></a>
                     </div>
-                    <div class="cat displaynone">
+                    <!-- <div class="cat displaynone">
                         <p><a href=""><strong>MEN</strong></a></p>
                         <p><a href=""><strong>WOMEN</strong></a></p>
                         <p><a href=""><strong>KIDS</strong></a></p>
@@ -534,19 +595,32 @@
                         <p>BRANDS</p>
                         <p>COLLECTIONS</p>
                         <p>OUTLET</p>
-                    </div>
+                    </div> -->
 
-                    <div class="icons">
+                    <!-- <div class="icons">
                         <div><input class="search displaynone" type="sreach" placeholder="Search"></div>
 
                         <div class="disicon"><a href=""><i class="fas fa-user-circle"></i></a></div>
                         <div class="disicon heart"><a href=""><i class="far fa-heart"></i></a></div>
                         <div class="searchicon"><a href=""><i class="fas fa-search"></i></a></div>
                         <div class="disicon"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>
+
+        <div id="status">
+            <p>1</p>
+            <p>BAG</p>
+            <p>2</p>
+            <p>DELIVERY</p>
+            <p>3</p>
+            <p>PAYMENT</p>
+            <p>4</p>
+            <p>ORDER COMPLETE</p>
+        </div>
+        <hr>
+
         <section>
             <div id="login_cart_bar">
                 <div>
@@ -583,7 +657,7 @@
         <br>
         <br>
         <br>
-        <select id="filter" onchange=""">
+        <select id="filter" onchange="">
             <option value="">State</option>
             <option value="">Andhra Pradesh</option>
             <option value="">Arunachal Pradesh</option>
@@ -622,7 +696,7 @@
               <div><p>STANDARD DELIVERY</p>
 
 
-                <p>within 3-9 business days</p></div>
+                <p><i class="fas fa-truck"></i> within 3-9 business days</p></div>
               <div>FREE</div>
           </div>
           <h1>CONTACT INFORMATION</h1>
@@ -637,8 +711,17 @@
             <p><input type="checkbox">&nbsp  My billing and delivery information are the same.</p>
           </div>
           
+          <div id="orderButton">
+            <button class="yellow_container_btn">
+
+                REVIEW & PAY
+                <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
+            </button>
+            
+            <div class="btn-back"></div>
+        </div>
     </form>
-    <section>
+    <!-- <section>
         <div class="yellow_container">
             <div class="yellow_container_heading">
                 <h4>JOIN ADIDAS AND GET 15% OFF</h4>
@@ -730,7 +813,7 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> -->
     <section>
         <div id="small_screenProductList">
             <div>
