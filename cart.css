@@ -3,6 +3,9 @@
             box-sizing: border-box;
             margin: auto;
         }
+        *{
+            margin: 0px;
+        }
 
     .hamburger {
             cursor: pointer;
@@ -287,6 +290,7 @@
 #check{
     display: flex;
     flex-direction: column;
+ width: 60%;
     
 }
 #order{
@@ -339,7 +343,7 @@ span.price{
     display: flex;
     font-size: small;
     /* height: 20%; */
-    width: 550px;
+    width: 60%;
 }
 .price1{
     float: right;
@@ -356,6 +360,13 @@ span.price{
 #sec{
     /* padding: 1%; */
     display: flex;
+    width:60%
+}
+#sec1{
+    width:60%;
+}
+#sec2{
+    width:40%;
 }
 #sec>b{
     color: black;
@@ -364,6 +375,10 @@ span.price{
     border: 1px solid black;
     /* height: 40%; */
     /* width:100px; */
+    width:40%;
+}
+#fir>img{
+    width: 100%;
 }
 .close {
     color: black;
@@ -371,6 +386,7 @@ span.price{
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 0px;
   }
   #link>p:hover{
     cursor: pointer;
