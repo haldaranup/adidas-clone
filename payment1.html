@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
-    
-    *{
-        font-family:"AdihausDIN",Helvetica,Arial,sans-serif;
-    }
-     hr.doted {
-  border-top: 1px dotted black;
-  width: 50%;
-  text-align:left;
-  margin-left:0;
-}
-#radio{
-    display: flex;
-}
-span{
-    font-weight: bolder;
-}
-.visa{
-    display: flex;
-    height: 30px;
-    width: 80px;
-}
-.cardno{
-    display: flex;
+        * {
+            font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+        }
 
-}
-.bigbox{
-    height: 50px;
-    width: 500px;
-}
-.smallbox{
-    height: 50px;
-    width: 243px;
-}
-.cartoonimg{
-    display: flex;
-    justify-content: space-between;
-    width: 700px;
-}
-form {
-    margin-left: 20px;
-}
-* {
+        hr.doted {
+            border-top: 1px dotted black;
+            width: 50%;
+            text-align: left;
+            margin-left: 0;
+        }
+
+        #radio {
+            display: flex;
+        }
+
+        span {
+            font-weight: bolder;
+        }
+
+        .visa {
+            display: flex;
+            height: 30px;
+            width: 80px;
+        }
+
+        .cardno {
+            display: flex;
+
+        }
+
+        .bigbox {
+            height: 50px;
+            width: 500px;
+        }
+
+        .smallbox {
+            height: 50px;
+            width: 243px;
+        }
+
+        .cartoonimg {
+            display: flex;
+            justify-content: space-between;
+            width: 700px;
+        }
+
+        form {
+            margin-left: 60px;
+        }
+
+        nav * {
             font-family: AdihausDIN, Helvetica, Arial, sans-serif;
-            box-sizing: border-box;
+
             margin: auto;
         }
 
@@ -166,7 +177,7 @@ form {
 
         .logodiv {
             display: flex;
-            margin-left: 2%;
+            margin: 3%;
         }
 
         .cat {
@@ -335,7 +346,7 @@ form {
 
 
         /* yellow container css start */
-
+        /* 
         .yellow_container {
 
             background-color: #ede734;
@@ -369,7 +380,7 @@ form {
             background-color: black;
             color: white;
             border: transparent;
-        }
+        } 
 
         .yellow_container_btn:hover {
             cursor: pointer;
@@ -380,9 +391,9 @@ form {
             width: 130px;
             height: 43px;
             border: 1px solid black;
-        }
+        } */
 
-        @media only screen and (min-width:0px)and (max-width:960px) {
+        /* @media only screen and (min-width:0px)and (max-width:960px) {
             .yellow_container_heading {
                 width: 100%;
                 margin-left: 2%;
@@ -395,7 +406,7 @@ form {
                 margin-top: 10px;
             }
 
-        }
+        } */
 
         /* yellow container css end */
 
@@ -477,30 +488,83 @@ form {
                 display: flex;
             }
 
+        }
+
+        #status {
+            display: flex;
+            margin-left: 2%;
+            width: 40%;
+            font-size: 14px;
+            justify-content: space-between;
+        }
+
+        #status>:nth-child(odd) {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
 
         }
 
+        #status>:nth-child(even) {
+            padding: 5px 10px;
+            font-weight: bolder;
+        }
+
+        #status>:nth-child(7) {
+            background-color: #767677
+        }
+
+        #status>:nth-child(8) {
+            color: #767677
+        }
+
+        .yellow_container_btn {
+            display: flex;
+            width: 450px;
+            padding: 16px 15px;
+            font-size: 12px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            background-color: black;
+            color: white;
+            border: transparent;
+            margin:40px auto 100px 40px;
+            justify-content: space-between;
+        }
+        .btn-back {
+            position: relative;
+            width: 450px;
+            height: 43px;
+            border: 1px solid black;
+            top: -140px;
+            left: 44px;
+        }
+        #orderButton{
+            position: relative;
+        }
     </style>
 </head>
+
 <body>
     <div id="container">
 
         <nav class="nav">
-            <div class="uppernav">
+            <!-- <div class="uppernav">
                 <p><a href="">SIGN UP & GET 15% OFF</a></p>
                 <p><a href="">QUICK EASY RETURNS ON PREPAID ORDERS</a></p>
                 <p><a href="">FREE DELIVERY FOR ALL ORDERS NOW</a></p>
-            </div>
+            </div> -->
 
             <div class="bottomnav">
-                <div class="firstnav displaynone">
+                <!-- <div class="firstnav displaynone">
                     <p><a href="">help</a></p>
                     <p><a href="">returns</a> </p>
                     <p><a href="">order tracker</a> </p>
                     <p><a href="">sign up</a> </p>
                     <p><a href="">creators club</a> </p>
                     <p><a href="">log in</a> </p>
-                </div>
+                </div> -->
 
 
                 <div class="midnav">
@@ -521,7 +585,9 @@ form {
                                 src="https://www.logosurfer.com/wp-content/uploads/2018/03/adidas-logo_0.png"
                                 alt=""></a>
                     </div>
-                    <div class="cat displaynone">
+
+
+                    <!-- <div class="cat displaynone">
                         <p><a href=""><strong>MEN</strong></a></p>
                         <p><a href=""><strong>WOMEN</strong></a></p>
                         <p><a href=""><strong>KIDS</strong></a></p>
@@ -529,19 +595,30 @@ form {
                         <p>BRANDS</p>
                         <p>COLLECTIONS</p>
                         <p>OUTLET</p>
-                    </div>
+                    </div> -->
 
-                    <div class="icons">
+                    <!-- <div class="icons">
                         <div><input class="search displaynone" type="sreach" placeholder="Search"></div>
 
                         <div class="disicon"><a href=""><i class="fas fa-user-circle"></i></a></div>
                         <div class="disicon heart"><a href=""><i class="far fa-heart"></i></a></div>
                         <div class="searchicon"><a href=""><i class="fas fa-search"></i></a></div>
                         <div class="disicon"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>
+        <div id="status">
+            <p>1</p>
+            <p>BAG</p>
+            <p>2</p>
+            <p>DELIVERY</p>
+            <p>3</p>
+            <p>PAYMENT</p>
+            <p>4</p>
+            <p>ORDER COMPLETE</p>
+        </div>
+        <hr>
         <section>
             <div id="login_cart_bar">
                 <div>
@@ -554,191 +631,209 @@ form {
                 </div>
             </div>
         </section>
-   
-  <form action="" >
-    <h1>PAYMENT METHOD</h1>
-    <p>All transactions are safe and secure</p>
-    <hr style="width:50%;text-align:left;margin-left:0">
-     <div id="radio">
-        <p><input type="radio">&nbsp  <span>Credit/Debit Card</span></p>
-        
-     </div>
-     <div class="cardno">
-         <div> <input type="text" placeholder="Card Number*" class="bigbox"></div>
-         <div class="visa"> 
-            <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-visa.svg" alt="">
-            <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-master-card.svg" alt="">
-            <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-rupay.svg" alt="">
-        </div>
-        
-     </div>
-    <br>
-    <br>
-    <input type="text" placeholder="Name On Card*" class="bigbox">
-    <br>
-    <br>
-    <br>
-    <input type="text" placeholder="MM/YY*" class="smallbox">
-    <input type="text" placeholder="CVV*" class="smallbox">
-    <P style="color: gray;">Card expiry date</P>
-    <hr class="doted">
-    <div class="cartoonimg">
-        <div><p> <input type="radio">&nbsp <span>Cash on Delivery</span></p></div>
-        <div>
-            <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-cash-on-delivery.svg" alt="" height="35px" width="100px">
-        </div>
-    </div>
-     
-  </form>
-  <section>
-    <div class="yellow_container">
-        <div class="yellow_container_heading">
-            <h4>JOIN ADIDAS AND GET 15% OFF</h4>
 
-            <div>
+        <form action="">
+            <h1>PAYMENT METHOD</h1>
+            <p>All transactions are safe and secure</p>
+            <hr style="width:50%;text-align:left;margin-left:0">
+            <div id="radio">
+                <p><input type="radio" name="chooseToPay">&nbsp <span>Credit/Debit Card</span></p>
+
+            </div>
+            <div class="cardno">
+                <div> <input type="text" placeholder="Card Number*" class="bigbox"></div>
+                <div class="visa">
+                    <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-visa.svg"
+                        alt="">
+                    <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-master-card.svg"
+                        alt="">
+                    <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-rupay.svg"
+                        alt="">
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <input type="text" placeholder="Name On Card*" class="bigbox">
+            <br>
+            <br>
+            <br>
+            <input type="text" placeholder="MM/YY*" class="smallbox">
+            <input type="text" placeholder="CVV*" class="smallbox">
+            <P style="color: gray;">Card expiry date</P>
+            <hr class="doted">
+            <div class="cartoonimg">
+                <div>
+                    <p> <input type="radio" name="chooseToPay">&nbsp <span>Cash on Delivery</span></p>
+                </div>
+                <div>
+                    <img src="https://www.adidas.co.in/static/checkout/react/e49383c/assets/img/icon-adidas-cash-on-delivery.svg"
+                        alt="" height="35px" width="100px">
+                </div>
+            </div>
+
+            <div id="orderButton">
                 <button class="yellow_container_btn">
 
-                    SIGN UP
-
+                    PLACE ORDER
                     <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
-
                 </button>
+                
                 <div class="btn-back"></div>
             </div>
+        </form>
 
 
-        </div>
-    </div>
-</section>
+        <!-- <section>
+            <div class="yellow_container">
+                <div class="yellow_container_heading">
+                    <h4>JOIN ADIDAS AND GET 15% OFF</h4>
 
-<section>
-    <div id="product_list">
-        <div>
-            <h5>PRODUCTS</h5>
-            <ul style="list-style: none;">
-                <li>Footwear</li>
-                <li>Clothing</li>
-                <li>Accessories</li>
-                <li>
-                    Outlet - Sales
-                </li>
-                <li>
-                    New Arrivals
-                </li>
+                    <div>
+                        <button class="yellow_container_btn">
 
-            </ul>
-        </div>
-        <div>
-            <h5>
-                SPORTS
-            </h5>
-            <ul>
-                <li>Running</li>
-                <li>Football</li>
-                <li>Gym/Training</li>
-                <li>Tennis</li>
-                <li>Outdoor</li>
-                <li>Basketball</li>
-                <li>Swimming</li>
-                <li>Skateboarding</li>
-            </ul>
-        </div>
-        <div>
-            <h5>COLLECTIONS</h5>
-            <ul>
-                <li>Ultraboost</li>
-                <li>Superstar</li>
-                <li>NMD</li>
-                <li>Stan Smith</li>
-                <li>Sustainability</li>
-                <li>Predator</li>
-                <li>Parley</li>
-                <li>adicolor</li>
-            </ul>
-        </div>
-        <div>
-            <h5>SUPPORT</h5>
-            <ul>
-                <li>Help</li>
-                <li>Customer Services</li>
-                <li>Returns & Exchanges</li>
-                <li>Shipping</li>
-                <li>Order Tracker</li>
-                <li>Store Locator</li>
-                <li>Running Shoe Finder</li>
-                <li>Bra Fit Guide</li>
-                <li>Terms and conditions creators club</li>
-            </ul>
-        </div>
-        <div>
-            <h5>COMPANY INFO</h5>
-            <ul>
-                <li>About Us</li>
-                <li>adidas stories</li>
-                <li>adidas Apps</li>
-                <li>Entity Details</li>
-                <li>Press</li>
-                <li>Careers</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<section>
-    <div id="small_screenProductList">
-        <div>
-            <ul>
-                <li>Delivery</li>
-                <li>Order Tracker</li>
-                <li>Store Finder</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li>Returns $ Refunds</li>
-                <li>Help</li>
-                <li>Terms and conditions creater club</li>
-            </ul>
-        </div>
-    </div>
-</section>
+                            SIGN UP
 
-<footer>
-    <div class="footsignup">
+                            <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
+
+                        </button>
+                        <div class="btn-back"></div>
+                    </div>
 
 
-    </div>
+                </div>
+            </div>
+        </section> -->
 
-    <div></div>
+        <!-- <section>
+            <div id="product_list">
+                <div>
+                    <h5>PRODUCTS</h5>
+                    <ul style="list-style: none;">
+                        <li>Footwear</li>
+                        <li>Clothing</li>
+                        <li>Accessories</li>
+                        <li>
+                            Outlet - Sales
+                        </li>
+                        <li>
+                            New Arrivals
+                        </li>
 
-    <div class="lastfoot">
+                    </ul>
+                </div>
+                <div>
+                    <h5>
+                        SPORTS
+                    </h5>
+                    <ul>
+                        <li>Running</li>
+                        <li>Football</li>
+                        <li>Gym/Training</li>
+                        <li>Tennis</li>
+                        <li>Outdoor</li>
+                        <li>Basketball</li>
+                        <li>Swimming</li>
+                        <li>Skateboarding</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>COLLECTIONS</h5>
+                    <ul>
+                        <li>Ultraboost</li>
+                        <li>Superstar</li>
+                        <li>NMD</li>
+                        <li>Stan Smith</li>
+                        <li>Sustainability</li>
+                        <li>Predator</li>
+                        <li>Parley</li>
+                        <li>adicolor</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li>Help</li>
+                        <li>Customer Services</li>
+                        <li>Returns & Exchanges</li>
+                        <li>Shipping</li>
+                        <li>Order Tracker</li>
+                        <li>Store Locator</li>
+                        <li>Running Shoe Finder</li>
+                        <li>Bra Fit Guide</li>
+                        <li>Terms and conditions creators club</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>COMPANY INFO</h5>
+                    <ul>
+                        <li>About Us</li>
+                        <li>adidas stories</li>
+                        <li>adidas Apps</li>
+                        <li>Entity Details</li>
+                        <li>Press</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+        <section>
+            <div id="small_screenProductList">
+                <div>
+                    <ul>
+                        <li>Delivery</li>
+                        <li>Order Tracker</li>
+                        <li>Store Finder</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Returns $ Refunds</li>
+                        <li>Help</li>
+                        <li>Terms and conditions creater club</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <div class="lastfoot1">
-            <div><img class="indialogo" src="https://adl-foundation.adidas.com/flags/1-0-0/in.svg" alt="">India
+        <footer>
+            <div class="footsignup">
+
+
             </div>
 
-            <div class="copyright"><a href="">©2021 adidas India Marketing Pvt. Ltd</a></div>
+            <div></div>
 
-        </div>
+            <div class="lastfoot">
 
-        <div class="tnc">
-            <p><a href="">Privacy</a></p>
-            <p><a href="">Terms & Conditions</a></p>
-            <p><a href="">Cookies</a></p>
-        </div>
+                <div class="lastfoot1">
+                    <div><img class="indialogo" src="https://adl-foundation.adidas.com/flags/1-0-0/in.svg" alt="">India
+                    </div>
+
+                    <div class="copyright"><a href="">©2021 adidas India Marketing Pvt. Ltd</a></div>
+
+                </div>
+
+                <div class="tnc">
+                    <p><a href="">Privacy</a></p>
+                    <p><a href="">Terms & Conditions</a></p>
+                    <p><a href="">Cookies</a></p>
+                </div>
+
+            </div>
+
+        </footer>
 
     </div>
-
-</footer>
-
-</div>
 </body>
+
 </html>
 <script>
-  document.querySelector(".hamburger").addEventListener("click", myFunction);
+    document.querySelector(".hamburger").addEventListener("click", myFunction);
 
-function myFunction() {
-    document.querySelector(".hamburger").classList.toggle("change")
+    function myFunction() {
+        document.querySelector(".hamburger").classList.toggle("change")
 
-    document.querySelector(".hamnames").classList.toggle("category")
+        document.querySelector(".hamnames").classList.toggle("category")
 
-}</script>
+    }</script>
