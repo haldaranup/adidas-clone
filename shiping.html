@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <title>Shipping address</title>
+    <style>
+        * {
+            /* margin-left: 30px; */
+            font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+        }
+
+        #standardDelivery {
+            display: flex;
+            border: 0.5px solid rgb(197, 186, 186);
+            height: 85px;
+            width: 605px;
+            justify-content: space-between;
+            padding: 0px 12px;
+
+        }
+
+        #standardDelivery>div:nth-child(2) {
+            margin-top: 12px;
+        }
+
+        .email {
+            font-weight: lighter;
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+        }
+
+        input[type=checkbox] {
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            color: white;
+
+        }
+
+
+        #filter {
+            height: 55px;
+            width: 308px;
+        }
+
+        .bigbox>input {
+            height: 50px;
+            width: 613px;
+
+        }
+
+        .bigbox>p {
+            color: gray;
+        }
+
+        #left {
+            margin-left: 60px;
+        }
+
+        #left p {
+            font-size: 14px;
+        }
+
+        /* * {
+            font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+            margin: auto;
+        } */
+
+        /* #container {
+    width: 100%;
+    height: 100vh;
+} */
+
+        .hamburger {
+            cursor: pointer;
+            display: none;
+            height: 30px;
+            margin: 50px 0px;
+
+        }
+
+        .change #bar1 {
+            transform: translateY(4px) rotateZ(-45deg);
+        }
+
+        .change #bar3 {
+            transform: translateY(-4px) rotate(45deg);
+        }
+
+        .change #bar2 {
+            /* display: none; */
+            opacity: 0;
+        }
+
+        .hamnames {
+            list-style: none;
+            background-color: #fff;
+            color: black;
+            height: 100vh;
+            width: 100vw;
+            display: none;
+            margin-left: -70px;
+        }
+
+        .category {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .hamnames>li>a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .bar {
+            height: 4px;
+            width: 30px;
+            display: block;
+            background-color: #000000;
+            transition: 0.4s ease;
+        }
+
+        #bar1 {
+            transform: translateY(-4px);
+        }
+
+        #bar3 {
+            transform: translateY(4px);
+        }
+
+        .uppernav {
+            width: 100%;
+            height: 30px;
+            font-size: 11px;
+            background-color: #000000;
+            display: flex;
+        }
+
+        .uppernav>p>a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            word-spacing: 2px;
+            letter-spacing: 2px;
+        }
+
+        .firstnav {
+            padding-left: 70%;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 32px;
+            width: 100%;
+            margin-right: 2%;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .firstnav>p>a {
+            text-decoration: none;
+            color: #524f4f;
+
+        }
+
+        .midnav {
+            height: 4em;
+            display: flex;
+            /* border: 1px solid red; */
+        }
+
+        .adidaslogo {
+            height: 50px;
+            top: -10px;
+            width: 75px;
+            position: relative;
+        }
+
+        .logodiv {
+            display: flex;
+            margin: 3%;
+
+        }
+
+        .cat {
+            display: flex;
+            width: 50%;
+            font-size: 14px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+
+        .cat>p>a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .search {
+            height: 34px;
+            width: 200px;
+            background-color: #e9ecef;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .footsignup {
+            display: flex;
+        }
+
+
+
+        .icons {
+            display: flex;
+            margin-right: 10px;
+
+        }
+
+        .disicon {
+            margin: 15px;
+            margin-right: 10px;
+        }
+
+        .fas,
+        .far {
+            color: #000000;
+        }
+
+        .searchicon {
+            display: none;
+        }
+
+
+
+        .lastfoot {
+            background-color: #363738;
+            height: 120px;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .indialogo {
+            height: 8px;
+            width: 18px;
+            margin-left: 20%;
+            margin-top: 28px;
+        }
+
+        .copyright {
+            margin-top: 3%;
+        }
+
+        .copyright>a {
+            margin-left: 20%;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .tnc {
+            display: flex;
+            margin-top: -6%;
+            margin-left: 65%;
+            margin-right: 15%;
+        }
+
+        .tnc>p>a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media only screen and (min-width: 900px) and (max-width: 1000px) {
+            .cat {
+                width: 50%;
+                font-size: 11px;
+            }
+
+            .search {
+                height: 30px;
+                width: 160px;
+            }
+
+            .firstnav {
+                padding-left: 60%;
+            }
+
+            .logodiv {
+                margin-left: 1%;
+            }
+
+            .tnc {
+                display: flex;
+                margin-top: -50px;
+                margin-left: 60%;
+                margin-right: 2%;
+            }
+
+            .tnc>p>a {
+                word-spacing: 5%;
+            }
+
+
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 900px) {
+
+            .logodiv {
+                margin-top: 12px;
+                height: 100%;
+                width: 100%;
+            }
+
+            .displaynone,
+            .heart,
+            .uppernav :nth-child(2),
+            .uppernav :nth-child(3) {
+                display: none;
+            }
+
+            .icons {
+                margin-top: 20px;
+                margin-right: 2%;
+            }
+
+            .searchicon {
+                display: initial;
+                margin-left: 5px;
+            }
+
+            .hamburger {
+                display: initial;
+                margin: 15px 2%;
+            }
+
+            .tnc {
+                display: block;
+                line-height: 20px;
+            }
+
+            .indialogo {
+                margin-left: 2%;
+                margin-top: 20px;
+            }
+
+            .copyright>a {
+                margin-left: 2%;
+            }
+
+        }
+
+
+        /* yellow container css start */
+
+        /* .yellow_container {
+
+            background-color: #ede734;
+            padding: 30px 20px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+            ;
+
+        }
+
+        .yellow_container_heading {
+            width: 60%;
+            font-size: 30px;
+            margin-left: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .poster_container>div,
+        .yellow_container_heading>div {
+            position: relative;
+            width: auto;
+        }
+
+        .yellow_container_btn {
+            position: absolute;
+            bottom: 4px;
+            left: -5px;
+            display: flex;
+            padding: 15px 29px;
+            background-color: black;
+            color: white;
+            border: transparent;
+        }
+
+        .yellow_container_btn:hover {
+            cursor: pointer;
+            color: lightgray;
+        }
+
+        .btn-back {
+            width: 130px;
+            height: 43px;
+            border: 1px solid black;
+        }
+
+        @media only screen and (min-width:0px)and (max-width:960px) {
+            .yellow_container_heading {
+                width: 100%;
+                margin-left: 2%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .yellow_container_heading>div {
+                margin-top: 10px;
+            }
+
+        } */
+
+        /* yellow container css end */
+
+
+        #login_cart_bar {
+            display: none;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+
+        }
+
+        #login_cart_bar>div {
+            padding: 20px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+        }
+
+        #product_list {
+            display: flex;
+            padding: 10px;
+            width: 98%;
+            justify-content: center;
+        }
+
+        #product_list>div {
+            margin-top: 20px;
+            width: 15%;
+        }
+
+        #product_list>div>h5 {
+            font-size: 18px;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+
+        }
+
+        #small_screenProductList>div>ul,
+        #product_list>div>ul {
+            list-style: none;
+            padding-left: 0px;
+
+        }
+
+        #small_screenProductList>div>ul>li,
+        #product_list>div>ul>li {
+            padding: 6px;
+            padding-left: 0px;
+            font-size: 12px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+        }
+
+        #small_screenProductList>div>ul>li:hover,
+        #product_list>div>ul>li:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        #small_screenProductList {
+            background-color: black;
+            display: none;
+            justify-content: space-around;
+            color: white;
+            height: 100px;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        @media only screen and (min-width:0px)and (max-width:960px) {
+            #login_cart_bar {
+                display: flex;
+            }
+
+            #product_list {
+                display: none;
+            }
+
+            #small_screenProductList {
+                display: flex;
+            }
+
+
+        }
+
+        #status {
+            display: flex;
+            margin-left: 2%;
+            width: 40%;
+            font-size: 14px;
+            justify-content: space-between;
+        }
+
+        #status>:nth-child(odd) {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+
+        }
+
+        #status>:nth-child(even) {
+            padding: 5px 10px;
+            font-weight: bolder;
+        }
+
+        #status>:nth-child(5),
+        #status>:nth-child(7) {
+            background-color: #767677;
+        }
+
+        #status>:nth-child(6),
+        #status>:nth-child(8) {
+            color: #767677;
+        }
+
+        .yellow_container_btn {
+            display: flex;
+            width: 180px;
+            padding: 16px 15px;
+            font-size: 12px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            background-color: black;
+            color: white;
+            border: transparent;
+            margin: 40px auto 100px 40px;
+            justify-content: space-between;
+        }
+
+        .btn-back {
+            position: relative;
+            width: 180px;
+            height: 43px;
+            border: 1px solid black;
+            top: -140px;
+            left: 44px;
+        }
+
+        #orderButton {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <nav class="nav">
+            <!-- <div class="uppernav">
+                <p><a href="">SIGN UP & GET 15% OFF</a></p>
+                <p><a href="">QUICK EASY RETURNS ON PREPAID ORDERS</a></p>
+                <p><a href="">FREE DELIVERY FOR ALL ORDERS NOW</a></p>
+            </div> -->
+
+            <div class="bottomnav">
+                <!-- <div class="firstnav displaynone">
+                    <p><a href="">help</a></p>
+                    <p><a href="">returns</a> </p>
+                    <p><a href="">order tracker</a> </p>
+                    <p><a href="">sign up</a> </p>
+                    <p><a href="">creators club</a> </p>
+                    <p><a href="">log in</a> </p>
+                </div>
+
+
+                <div class="midnav">
+                    <div class="hamburger">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </div>
+                    <div class="hamnames">
+                        <li><a href=""><strong>MEN</strong></a></li>
+                        <li><a href=""><strong>WOMEN</strong></a></li>
+                        <li><a href=""><strong>KIDS</strong></a></li>
+                        <li><a href="">LOG IN</a></li>
+                    </div> -->
+
+                <div class="logodiv">
+                    <a href=""><img class="adidaslogo"
+                            src="https://www.logosurfer.com/wp-content/uploads/2018/03/adidas-logo_0.png" alt=""></a>
+                </div>
+                <!-- <div class="cat displaynone">
+                        <p><a href=""><strong>MEN</strong></a></p>
+                        <p><a href=""><strong>WOMEN</strong></a></p>
+                        <p><a href=""><strong>KIDS</strong></a></p>
+                        <p>SPORTS</p>
+                        <p>BRANDS</p>
+                        <p>COLLECTIONS</p>
+                        <p>OUTLET</p>
+                    </div> -->
+
+                <!-- <div class="icons">
+                        <div><input class="search displaynone" type="sreach" placeholder="Search"></div>
+
+                        <div class="disicon"><a href=""><i class="fas fa-user-circle"></i></a></div>
+                        <div class="disicon heart"><a href=""><i class="far fa-heart"></i></a></div>
+                        <div class="searchicon"><a href=""><i class="fas fa-search"></i></a></div>
+                        <div class="disicon"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
+                    </div> -->
+            </div>
+    </div>
+    </nav>
+
+    <div id="status">
+        <p>1</p>
+        <p>BAG</p>
+        <p>2</p>
+        <p>DELIVERY</p>
+        <p>3</p>
+        <p>PAYMENT</p>
+        <p>4</p>
+        <p>ORDER COMPLETE</p>
+    </div>
+    <hr>
+
+    <section>
+        <div id="login_cart_bar">
+            <div>
+                <h5>LOG IN</h5>
+            </div>
+            <div>
+                <h5>
+                    YOUR BAG(<span id="cart-item"></span>)
+                </h5>
+            </div>
+        </div>
+    </section>
+
+
+    <form action="" id="left">
+        <h1>SHIPPING ADDRESS</h1>
+        <input type="text" placeholder="First Name *" required="required">
+        <input type="text" placeholder="Last Name*" required="required">
+        <br>
+        <br>
+        <br>
+        <div class="bigbox">
+            <input type="text" placeholder="Street Address*" required="required">
+            <p>E.g.3 Stripes Street</p>
+        </div>
+        <br>
+        <div class="bigbox">
+            <input type="text" placeholder="Landmark*" required="required">
+            <p>E.g. Company, Apartement,Building,etc.</p>
+        </div>
+        <br>
+        <input type="text" placeholder="Additional Info (optional)">
+        <input type="text" placeholder="City*" required="required">
+        <br>
+        <br>
+        <br>
+        <select id="filter" onchange="" required="required">
+            <option value="">State</option>
+            <option value="">Andhra Pradesh</option>
+            <option value="">Arunachal Pradesh</option>
+            <option value="">Assam</option>
+            <option value="">Bihar</option>
+            <option value="">Chhattisgarh</option>
+            <option value="">Goa</option>
+            <option value="">Gujarat</option>
+            <option value="">Haryana</option>
+            <option value="">Himachal Pradesh</option>
+            <option value="">Jharkhand</option>
+            <option value="">Karnataka</option>
+            <option value="">Kerala</option>
+            <option value="">Madhya Pradesh</option>
+            <option value="">Maharashtra</option>
+            <option value="">Manipur</option>
+            <option value="">Meghalaya</option>
+            <option value="">Mizoram</option>
+            <option value="">Nagaland</option>
+            <option value="">Odisha</option>
+            <option value="">Punjab</option>
+            <option value="">Rajasthan</option>
+            <option value="">Sikkim</option>
+            <option value="">Tamil Nadu</option>
+            <option value="">Telangana</option>
+            <option value="">Tripura</option>
+            <option value="">Uttar Pradesh</option>
+            <option value="">Uttarakhand</option>
+            <option value="">West Bengal</option>
+        </select>
+        <input type="number" placeholder="Pin Code*" required="required">
+        <br>
+        <h5>Country:india</h5>
+        <h2>ARRIVING</h2>
+        <div id="standardDelivery">
+            <div>
+                <p>STANDARD DELIVERY</p>
+
+
+                <p><i class="fas fa-truck"></i> within 3-9 business days</p>
+            </div>
+            <div>FREE</div>
+        </div>
+        <h1>CONTACT INFORMATION</h1>
+        <p>We'll use these details to keep you informed on your delivery.</p>
+        <input type="number" placeholder="Mobile Number*" required="required">
+        <p>We will only call you if there are questions regarding your order.</p>
+        <h4>Email: <span class="email">xyz_123@gmail.com</span></h4>
+
+
+        <div class="checkbox">
+            <p><input type="checkbox">&nbsp Save address and contact information for future orders</p>
+            <p><input type="checkbox">&nbsp My billing and delivery information are the same.</p>
+        </div>
+
+        <div id="orderButton">
+            <!-- <button id="mysubmit" class="yellow_container_btn"> -->
+
+            <input class="yellow_container_btn" type="submit" value="Review & Pay &#8594">
+            <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
+            <!-- </button> -->
+
+            <!-- <div class="btn-back"></div> -->
+        </div>
+    </form>
+    <!-- <section>
+        <div class="yellow_container">
+            <div class="yellow_container_heading">
+                <h4>JOIN ADIDAS AND GET 15% OFF</h4>
+
+                <div>
+                    <button class="yellow_container_btn">
+
+                        SIGN UP
+
+                        <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
+
+                    </button>
+                    <div class="btn-back"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="product_list">
+            <div>
+                <h5>PRODUCTS</h5>
+                <ul style="list-style: none;">
+                    <li>Footwear</li>
+                    <li>Clothing</li>
+                    <li>Accessories</li>
+                    <li>
+                        Outlet - Sales
+                    </li>
+                    <li>
+                        New Arrivals
+                    </li>
+
+                </ul>
+            </div>
+            <div>
+                <h5>
+                    SPORTS
+                </h5>
+                <ul>
+                    <li>Running</li>
+                    <li>Football</li>
+                    <li>Gym/Training</li>
+                    <li>Tennis</li>
+                    <li>Outdoor</li>
+                    <li>Basketball</li>
+                    <li>Swimming</li>
+                    <li>Skateboarding</li>
+                </ul>
+            </div>
+            <div>
+                <h5>COLLECTIONS</h5>
+                <ul>
+                    <li>Ultraboost</li>
+                    <li>Superstar</li>
+                    <li>NMD</li>
+                    <li>Stan Smith</li>
+                    <li>Sustainability</li>
+                    <li>Predator</li>
+                    <li>Parley</li>
+                    <li>adicolor</li>
+                </ul>
+            </div>
+            <div>
+                <h5>SUPPORT</h5>
+                <ul>
+                    <li>Help</li>
+                    <li>Customer Services</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Shipping</li>
+                    <li>Order Tracker</li>
+                    <li>Store Locator</li>
+                    <li>Running Shoe Finder</li>
+                    <li>Bra Fit Guide</li>
+                    <li>Terms and conditions creators club</li>
+                </ul>
+            </div>
+            <div>
+                <h5>COMPANY INFO</h5>
+                <ul>
+                    <li>About Us</li>
+                    <li>adidas stories</li>
+                    <li>adidas Apps</li>
+                    <li>Entity Details</li>
+                    <li>Press</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        <div id="small_screenProductList">
+            <div>
+                <ul>
+                    <li>Delivery</li>
+                    <li>Order Tracker</li>
+                    <li>Store Finder</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Returns $ Refunds</li>
+                    <li>Help</li>
+                    <li>Terms and conditions creater club</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footsignup">
+
+
+        </div>
+
+        <div></div>
+
+        <div class="lastfoot">
+
+            <div class="lastfoot1">
+                <div><img class="indialogo" src="https://adl-foundation.adidas.com/flags/1-0-0/in.svg" alt="">India
+                </div>
+
+                <div class="copyright"><a href="">©2021 adidas India Marketing Pvt. Ltd</a></div>
+
+            </div>
+
+            <div class="tnc">
+                <p><a href="">Privacy</a></p>
+                <p><a href="">Terms & Conditions</a></p>
+                <p><a href="">Cookies</a></p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    // document.querySelector(".hamburger").addEventListener("click", myFunction);
+
+    // function myFunction() {
+    //     document.querySelector(".hamburger").classList.toggle("change")
+
+    //     document.querySelector(".hamnames").classList.toggle("category")
+
+    // }
+    document.querySelector("#left").addEventListener("submit", myform);
+    function myform(event) {
+        event.preventDefault();
+        console.log("hhhh");
+        window.location.href = 'payment.html';
+
+    }
+
+</script>
