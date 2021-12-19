@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +8,67 @@
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
     <title>Shipping address</title>
     <style>
-        *{
+        * {
             /* margin-left: 30px; */
-            font-family:"AdihausDIN",Helvetica,Arial,sans-serif;
+            font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
         }
-        #standardDelivery{
+
+        #standardDelivery {
             display: flex;
             border: 0.5px solid rgb(197, 186, 186);
             height: 85px;
-            width: 605px;   
-            justify-content: space-between;  
-            padding: 0px 12px; 
-                  
+            width: 605px;
+            justify-content: space-between;
+            padding: 0px 12px;
+
         }
-        #standardDelivery>div:nth-child(2){
+
+        #standardDelivery>div:nth-child(2) {
             margin-top: 12px;
         }
-       .email{
-           font-weight: lighter;
-       }
-       input{
-           height: 50px;
-           width: 300px;
-       }
-       input[type=checkbox]{
-           height: 20px;
-           width: 20px;
-           background-color: black;
-           color: white;
-           
-       }
-     
 
-       #filter{
-           height: 55px;
-           width: 308px;
-       }
-       .bigbox>input{
-           height: 50px;
-           width: 613px;
-           
-       }
-       .bigbox>p{
-         color: gray;
-       }
-       #left{
-           margin-left: 60px;
-       }
-       #left p{
-           font-size: 14px;
-       }
-       /* * {
+        .email {
+            font-weight: lighter;
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+        }
+
+        input[type=checkbox] {
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            color: white;
+
+        }
+
+
+        #filter {
+            height: 55px;
+            width: 308px;
+        }
+
+        .bigbox>input {
+            height: 50px;
+            width: 613px;
+
+        }
+
+        .bigbox>p {
+            color: gray;
+        }
+
+        #left {
+            margin-left: 60px;
+        }
+
+        #left p {
+            font-size: 14px;
+        }
+
+        /* * {
             font-family: AdihausDIN, Helvetica, Arial, sans-serif;
             box-sizing: border-box;
             margin: auto;
@@ -177,7 +188,7 @@
         .logodiv {
             display: flex;
             margin: 3%;
-            
+
         }
 
         .cat {
@@ -532,9 +543,10 @@
             background-color: black;
             color: white;
             border: transparent;
-            margin:40px auto 100px 40px;
+            margin: 40px auto 100px 40px;
             justify-content: space-between;
         }
+
         .btn-back {
             position: relative;
             width: 180px;
@@ -543,11 +555,13 @@
             top: -140px;
             left: 44px;
         }
-        #orderButton{
+
+        #orderButton {
             position: relative;
         }
     </style>
 </head>
+
 <body>
     <div id="container">
 
@@ -582,12 +596,11 @@
                         <li><a href="">LOG IN</a></li>
                     </div> -->
 
-                    <div class="logodiv">
-                        <a href=""><img class="adidaslogo"
-                                src="https://www.logosurfer.com/wp-content/uploads/2018/03/adidas-logo_0.png"
-                                alt=""></a>
-                    </div>
-                    <!-- <div class="cat displaynone">
+                <div class="logodiv">
+                    <a href=""><img class="adidaslogo"
+                            src="https://www.logosurfer.com/wp-content/uploads/2018/03/adidas-logo_0.png" alt=""></a>
+                </div>
+                <!-- <div class="cat displaynone">
                         <p><a href=""><strong>MEN</strong></a></p>
                         <p><a href=""><strong>WOMEN</strong></a></p>
                         <p><a href=""><strong>KIDS</strong></a></p>
@@ -597,7 +610,7 @@
                         <p>OUTLET</p>
                     </div> -->
 
-                    <!-- <div class="icons">
+                <!-- <div class="icons">
                         <div><input class="search displaynone" type="sreach" placeholder="Search"></div>
 
                         <div class="disicon"><a href=""><i class="fas fa-user-circle"></i></a></div>
@@ -605,59 +618,59 @@
                         <div class="searchicon"><a href=""><i class="fas fa-search"></i></a></div>
                         <div class="disicon"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
                     </div> -->
-                </div>
             </div>
-        </nav>
+    </div>
+    </nav>
 
-        <div id="status">
-            <p>1</p>
-            <p>BAG</p>
-            <p>2</p>
-            <p>DELIVERY</p>
-            <p>3</p>
-            <p>PAYMENT</p>
-            <p>4</p>
-            <p>ORDER COMPLETE</p>
+    <div id="status">
+        <p>1</p>
+        <p>BAG</p>
+        <p>2</p>
+        <p>DELIVERY</p>
+        <p>3</p>
+        <p>PAYMENT</p>
+        <p>4</p>
+        <p>ORDER COMPLETE</p>
+    </div>
+    <hr>
+
+    <section>
+        <div id="login_cart_bar">
+            <div>
+                <h5>LOG IN</h5>
+            </div>
+            <div>
+                <h5>
+                    YOUR BAG(<span id="cart-item"></span>)
+                </h5>
+            </div>
         </div>
-        <hr>
+    </section>
 
-        <section>
-            <div id="login_cart_bar">
-                <div>
-                    <h5>LOG IN</h5>
-                </div>
-                <div>
-                    <h5>
-                        YOUR BAG(<span id="cart-item"></span>)
-                    </h5>
-                </div>
-            </div>
-        </section>
-   
-    
+
     <form action="" id="left">
         <h1>SHIPPING ADDRESS</h1>
-        <input type="text" placeholder="First Name *">
-        <input type="text" placeholder="Last Name*">
+        <input type="text" placeholder="First Name *" required="required">
+        <input type="text" placeholder="Last Name*" required="required">
         <br>
         <br>
         <br>
         <div class="bigbox">
-        <input type="text" placeholder="Street Address*">
-        <p>E.g.3 Stripes Street</p>
+            <input type="text" placeholder="Street Address*" required="required">
+            <p>E.g.3 Stripes Street</p>
         </div>
         <br>
-       <div class="bigbox">
-        <input type="text" placeholder="Landmark*">
-        <p>E.g. Company, Apartement,Building,etc.</p>
-       </div>
+        <div class="bigbox">
+            <input type="text" placeholder="Landmark*" required="required">
+            <p>E.g. Company, Apartement,Building,etc.</p>
+        </div>
         <br>
-        <input type="text" placeholder="Additional Info">
-        <input type="text" placeholder="City*">
+        <input type="text" placeholder="Additional Info (optional)">
+        <input type="text" placeholder="City*" required="required">
         <br>
         <br>
         <br>
-        <select id="filter" onchange="">
+        <select id="filter" onchange="" required="required">
             <option value="">State</option>
             <option value="">Andhra Pradesh</option>
             <option value="">Arunachal Pradesh</option>
@@ -687,38 +700,40 @@
             <option value="">Uttar Pradesh</option>
             <option value="">Uttarakhand</option>
             <option value="">West Bengal</option>
-          </select>
-          <input type="number" placeholder="Pin Code*" >
-          <br>
-          <h5>Country:india</h5>
-          <h2>ARRIVING</h2>
-          <div id="standardDelivery">
-              <div><p>STANDARD DELIVERY</p>
+        </select>
+        <input type="number" placeholder="Pin Code*" required="required">
+        <br>
+        <h5>Country:india</h5>
+        <h2>ARRIVING</h2>
+        <div id="standardDelivery">
+            <div>
+                <p>STANDARD DELIVERY</p>
 
 
-                <p><i class="fas fa-truck"></i> within 3-9 business days</p></div>
-              <div>FREE</div>
-          </div>
-          <h1>CONTACT INFORMATION</h1>
-          <p>We'll use these details to keep you informed on your delivery.</p>
-          <input type="number" placeholder="Mobile Number*">
-          <p>We will only call you if there are questions regarding your order.</p>
-          <h4>Email: <span class="email">xyz_123@gmail.com</span></h4>
-          
+                <p><i class="fas fa-truck"></i> within 3-9 business days</p>
+            </div>
+            <div>FREE</div>
+        </div>
+        <h1>CONTACT INFORMATION</h1>
+        <p>We'll use these details to keep you informed on your delivery.</p>
+        <input type="number" placeholder="Mobile Number*" required="required">
+        <p>We will only call you if there are questions regarding your order.</p>
+        <h4>Email: <span class="email">xyz_123@gmail.com</span></h4>
 
-          <div class="checkbox">
+
+        <div class="checkbox">
             <p><input type="checkbox">&nbsp Save address and contact information for future orders</p>
-            <p><input type="checkbox">&nbsp  My billing and delivery information are the same.</p>
-          </div>
-          
-          <div id="orderButton">
-            <button class="yellow_container_btn">
+            <p><input type="checkbox">&nbsp My billing and delivery information are the same.</p>
+        </div>
 
-                REVIEW & PAY
-                <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
-            </button>
-            
-            <div class="btn-back"></div>
+        <div id="orderButton">
+            <!-- <button id="mysubmit" class="yellow_container_btn"> -->
+
+            <input class="yellow_container_btn" type="submit" value="Review & Pay &#8594">
+            <i class='fas fa-arrow-right' style='margin-left:8px; color: white;'></i>
+            <!-- </button> -->
+
+            <!-- <div class="btn-back"></div> -->
         </div>
     </form>
     <!-- <section>
@@ -861,17 +876,25 @@
 
     </footer>
 
-</div>   
+    </div>
 
 </body>
+
 </html>
 <script>
-    document.querySelector(".hamburger").addEventListener("click", myFunction);
+    // document.querySelector(".hamburger").addEventListener("click", myFunction);
 
-    function myFunction() {
-        document.querySelector(".hamburger").classList.toggle("change")
+    // function myFunction() {
+    //     document.querySelector(".hamburger").classList.toggle("change")
 
-        document.querySelector(".hamnames").classList.toggle("category")
+    //     document.querySelector(".hamnames").classList.toggle("category")
+
+    // }
+    document.querySelector("#left").addEventListener("submit", myform);
+    function myform(event) {
+        event.preventDefault();
+        console.log("hhhh");
+        window.location.href = 'payment.html';
 
     }
 
