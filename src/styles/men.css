@@ -1,0 +1,564 @@
+*{
+    box-sizing: border-box;
+}
+
+#productSection {
+    padding: 0px 12px;
+    margin: 80px 0px;
+}
+
+section>div>div:hover {
+    cursor: pointer;
+}
+
+#productSection>section>h1 {
+    margin: 20px 0px;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+}
+
+#displayContents>div,
+#menOriginals>div,
+#bestOfAdidas>div {
+    /* border: 1px solid black; */
+    min-width: 21%;
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+}
+
+#displayContents,
+#menOriginals,
+#bestOfAdidas {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-right: 20px;
+}
+
+#displayContents{
+    height: 525px;
+}
+
+#menOriginals,
+#bestOfAdidas{
+    height: 380px;
+}
+#menOriginals>div:hover,
+#bestOfAdidas>div:hover{
+    border: 1px solid black;
+}
+
+#menHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+#menHeading>a{
+    color: black;
+    font-size: 13px;
+    letter-spacing: 3px;
+    height: 60%;
+    margin-top: 10px;
+}
+#menHeading>h1{
+    margin-bottom: 20px;
+}
+
+.wishlistSymbol {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.wishlistSymbol:hover{
+    font-size: 25px;
+}
+
+.cartSym {
+    position: absolute;
+    top: 58%;
+    right: 16px;
+    font-size: 30px;
+    color: rgb(54, 54, 54);
+}
+.cartSym:hover{
+    color: rgb(14, 14, 14);
+    font-size: 35px;
+}
+
+#productSection a:hover{
+    background-color: black;
+    color: white;
+}
+
+.price1 {
+    background-color: white;
+    padding: 0px 5px;
+    position: absolute;
+    top: 62%;
+    left: 0px;
+}
+
+.price {
+    background-color: white;
+    padding: 0px 5px;
+    position: absolute;
+    top: 65%;
+    left: 0px;
+}
+
+#productSection img {
+    width: 100%;
+}
+
+#productSection h4 {
+    margin: 5px 0px;
+    font-size: 16px;
+}
+
+#productSection p {
+    margin: 10px 0px;
+    font-size: 16px;
+    color: rgb(44, 44, 44);
+}
+
+#productSection>section:nth-child(2) a {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+}
+
+#productSection h6 {
+    margin: 2px;
+    font-weight: 100;
+}
+
+
+
+
+#menDescription {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 750px;
+    text-align: center;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;;
+}
+
+#menDescription>p {
+    font-size: 19px;
+}
+
+
+/* -------------------------------------------- */
+
+#container_banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 50px auto;
+    height: 250px;
+    
+}
+
+.container_banneer_img1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-COLOR: #ebeff1;
+}
+
+.container_banneer_img1>img {
+    width: 80%;
+    height: 200px;
+}
+
+.container_banneer_img1>h5 {
+    text-decoration: underline;
+    margin-top: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.container_banneer_img1>h5:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (min-width:600px)and (max-width:960px) {
+    #container_banner {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin: 50px auto;
+    }
+    .container_banneer_img1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-COLOR: #ebeff1;
+        align-items: flex-end;
+    }
+    .container_banneer_img1>img {
+        width: 50%;
+        height: auto;
+    }
+    #displayContents>div {
+        min-width: 40%;
+    }
+    #menOriginals>div,
+    #bestOfAdidas>div {
+        min-width: 31%;
+    }
+   
+    #productSection>section>h1 {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 50px 0px;
+    }
+    .price {
+        top: 190px;
+    }
+    .price1 {
+        bottom: 50px;
+    }
+    #menDescription {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:0px)and (max-width:599px) {
+    #container_banner {
+        grid-template-columns: repeat(1, 1fr);
+        height: 580px;
+    }
+    .container_banneer_img1 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .container_banneer_img1>img {
+        width: 40%;
+        height: auto;
+    }
+    #displayContents>div {
+        min-width: 85%;
+    }
+    #menOriginals>div,
+    #bestOfAdidas>div {
+        min-width: 42%;
+    }
+    
+    #menDescription {
+        width: 90%;
+    }
+    #productSection>section>h1 {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 50px 0px;
+    }
+    .price {
+        top: 105px;
+    }
+    .price1 {
+        bottom: 65px;
+    }
+}
+
+
+/* poster css start */
+
+* {
+    margin: 0px;
+}
+
+#poster {
+    width: 100%;
+    height: 100vh;
+    min-height: 30vh;
+    background-image: url("https://images.pexels.com/photos/684152/pexels-photo-684152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.poster_container {
+    width: auto;
+    margin-left: 20px;
+}
+
+.poster_container>h2 {
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.poster_container>button {
+    padding: 15px 25px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.poster_container>i {
+    font-size: 20px;
+    color: black;
+    margin-left: 10px;
+}
+
+.poster_container>h1 {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* poster css end */
+
+
+/* poster media queries start  */
+
+@media only screen and (min-width:600px)and (max-width:960px) {
+    #poster {
+        align-items: flex-end;
+        height: 60vh;
+        background-size: cover;
+        width: 100%;
+        background-image: url("https://images.pexels.com/photos/8047038/pexels-photo-8047038.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+    .poster_container {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:0px)and (max-width:599px) {
+    #poster {
+        align-items: flex-end;
+        width: 100%;
+        min-width: 100%;
+        background-image: url("https://images.pexels.com/photos/4619884/pexels-photo-4619884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+    .poster_container {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* poster media queries end  */
+
+/* bar css start */
+.bar_heading{
+    text-align: center;
+    margin: 30px;
+    font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+    font-size:25px;
+}
+ #bar {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            background-color: #e9ecef;
+            padding: 15px 20px 15px 20px ;
+            font-size: 14px;
+            margin: auto;
+            margin-bottom: 80px;
+
+        }
+
+        #bar>div {
+            margin: 0px 20px 0px 20px;
+        }
+
+        @media only screen and (min-width:600px)and (max-width:960px) {
+            #bar{
+                /* overflow-x: scroll; */
+               display:grid;
+               grid-template-columns: repeat(5, 1fr);
+               grid-gap:10px;
+               grid-template-rows: repeat(1,auto);
+             
+
+            }
+             /* #bar>div{
+                 display: flex;
+                flex-flow: row  ;
+             } */
+
+
+        }
+           @media only screen and (min-width:0px)and (max-width:600px) {
+            #bar{
+                display:grid;
+               grid-template-columns: repeat(5, 1fr);
+               grid-gap:10px;
+               grid-template-rows: repeat(1,auto);
+               width:fit-content;
+            }
+            
+        #bar>div {
+            margin: 0px 3px 0px 3px;
+            font-size:12px;
+        }
+
+
+        }
+
+/* bar css end */
+  /* yellow container css start */
+
+        .yellow_container {
+
+            background-color: #ede734;
+            padding: 30px 20px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+            ;
+
+        }
+
+        .yellow_container_heading {
+            width: 60%;
+            font-size: 30px;
+            margin-left: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .poster_container>div,
+        .yellow_container_heading>div {
+            position: relative;
+            width: auto;
+        }
+
+        .yellow_container_btn {
+            position: absolute;
+            bottom: 4px;
+            left: -5px;
+            display: flex;
+            padding: 15px 29px;
+            background-color: black;
+            color: white;
+            border: transparent;
+        }
+
+        .yellow_container_btn:hover {
+            cursor: pointer;
+            color: lightgray;
+        }
+
+        .btn-back {
+            width: 130px;
+            height: 43px;
+            border: 1px solid black;
+        }
+
+        @media only screen and (min-width:0px)and (max-width:960px) {
+            .yellow_container_heading {
+                width: 100%;
+                margin-left: 2%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .yellow_container_heading>div {
+                margin-top: 10px;
+            }
+
+        }
+
+        /* yellow container css end */
+
+
+        #login_cart_bar {
+            display: none;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+
+        }
+
+        #login_cart_bar>div {
+            padding: 20px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+        }
+
+        #product_list {
+            display: flex;
+            padding: 10px;
+            width: 98%;
+            justify-content: center;
+        }
+
+        #product_list>div {
+            margin-top: 20px;
+            width: 15%;
+        }
+
+        #product_list>div>h5 {
+            font-size: 18px;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+
+        }
+
+        #small_screenProductList>div>ul,
+        #product_list>div>ul {
+            list-style: none;
+            padding-left: 0px;
+
+        }
+
+        #small_screenProductList>div>ul>li,
+        #product_list>div>ul>li {
+            padding: 6px;
+            padding-left: 0px;
+            font-size: 12px;
+            font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+        }
+
+        #small_screenProductList>div>ul>li:hover,
+        #product_list>div>ul>li:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        #small_screenProductList {
+            background-color: black;
+            display: none;
+            justify-content: space-around;
+            color: white;
+            height: 100px;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        @media only screen and (min-width:0px)and (max-width:960px) {
+            #login_cart_bar {
+                display: flex;
+            }
+
+            #product_list {
+                display: none;
+            }
+
+            #small_screenProductList {
+                display: flex;
+            }
+
+
+        }
