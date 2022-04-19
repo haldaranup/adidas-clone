@@ -69,4 +69,4 @@ adidas-clone12.netlify.app
 ![items](/src/assets/login.png)
 
 ## For more details, here is our blog
-[Blog](https://haldaranup.medium.com/working-with-back-end-on-paytm-mall-website-1df443c3e5c7)
+[Blog](https://haldaranup.medium.com/@unnatigandhi999/9622ce83d95a)
