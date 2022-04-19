@@ -20,9 +20,11 @@ git clone https://github.com/haldaranup/adidas-clone.git
 adidas-clone12.netlify.app
 
 ## Contributers :- 
-- #### [Sagar](https://www.linkedin.com/in/sagar-pradhan16/)
+- #### [Unnati](https://www.linkedin.com/in/unnati-gandhi-122212230/)
 - #### [Anup Haldar](https://www.linkedin.com/in/haldar-anup/)
-- #### [Rahul Yadav](https://www.linkedin.com/in/mrah100/)
+- #### [Ankush Gupta](https://www.linkedin.com/in/ankush-gupta-41097/)
+- #### [Triveni Gupta](https://www.linkedin.com/in/trivenigupta/)
+- #### [Rahul Kishore](https://www.linkedin.com/in/rahul-kishore-48835b223/)
 
 
 
@@ -31,10 +33,6 @@ adidas-clone12.netlify.app
 - #### HTML
 - #### CSS 
 - #### JavaScript
-- #### NodeJs
-- #### Express
-- #### MongoDB
-- #### Mongoose
 - #### GIT
 
 
