@@ -17,7 +17,7 @@ git clone https://github.com/haldaranup/adidas-clone.git
 
 
 ## Deployment Link:-
-adidas-clone12.netlify.app
+[adidas-clone12.netlify.app](adidas-clone12.netlify.app)
 
 ## Contributers :- 
 - #### [Unnati](https://www.linkedin.com/in/unnati-gandhi-122212230/)
