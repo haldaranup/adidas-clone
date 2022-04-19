@@ -17,7 +17,7 @@ git clone https://github.com/haldaranup/adidas-clone.git
 
 
 ## Deployment Link:-
-https://paytm-mall-masai.netlify.app
+adidas-clone12.netlify.app
 
 ## Contributers :- 
 - #### [Sagar](https://www.linkedin.com/in/sagar-pradhan16/)
