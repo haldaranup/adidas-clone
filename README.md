@@ -69,4 +69,4 @@ adidas-clone12.netlify.app
 ![items](/src/assets/login.png)
 
 ## For more details, here is our blog
-[Blog](https://haldaranup.medium.com/@unnatigandhi999/9622ce83d95a)
+[Blog](https://medium.com/@unnatigandhi999/9622ce83d95a)
