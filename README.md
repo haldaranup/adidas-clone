@@ -3,7 +3,7 @@ Cloning the adidas website for the construct week project. Adidas Originals is a
 # Adidas
 
 
-![Adidas](/src/assets/honepage.png)
+![Adidas](/src/assets/homepage.png)
 
 
 # Welcome :wave:
