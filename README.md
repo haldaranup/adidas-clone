@@ -1,3 +1,5 @@
+# Welcome :wave:
+
 # Adidas-clone
 Cloning the adidas website for the construct week project. Adidas Originals is a brand of a line of casual and sportswear created by German multinational corporation Adidas. It consists of a heritage line, specializing in athletic shoes, t-shirts, jackets, bags, sunglasses and other accessories.
 # Adidas
@@ -6,7 +8,7 @@ Cloning the adidas website for the construct week project. Adidas Originals is a
 ![Adidas](/src/assets/homepage.png)
 
 
-# Welcome :wave:
+
 
 
 ## Run Locally :-
