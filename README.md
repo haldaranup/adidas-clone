@@ -23,7 +23,7 @@ git clone https://github.com/haldaranup/adidas-clone.git
 
 ## Contributers :- 
 - #### [Unnati](https://www.linkedin.com/in/unnati-gandhi-122212230/)
-- #### [Anup Haldar](https://www.linkedin.com/in/haldar-anup/)
+- #### [Anup Haldar](https://www.linkedin.com/in/haldaranup/)
 - #### [Ankush Gupta](https://www.linkedin.com/in/ankush-gupta-41097/)
 - #### [Triveni Gupta](https://www.linkedin.com/in/trivenigupta/)
 - #### [Rahul Kishore](https://www.linkedin.com/in/rahul-kishore-48835b223/)
